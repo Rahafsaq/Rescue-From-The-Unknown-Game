@@ -1,6 +1,6 @@
-**Imprisoned Characters Game:**
+# **Imprisoned Characters Game:**
 
-**Description:**
+### **Description:**
 
 1. ✨Our project is an interactive game where players choose a character and start play on a search-based adventure across designated locations.
 
@@ -8,7 +8,7 @@
 
 3. ✨At each location, they encounter a multi-challenges that they must solve to free thier character copies and win the game🎉🏆.
 
-**Resources:**
+### **Resources:**
 1. Figma: 
 https://www.figma.com/file/u6bsjngQEpNE68zazQGrpF/Imprisoned-characters?type=design&node-id=0-1&mode=design&t=zD5RHKU08zxwu2A7-0
 2. User Story:
