@@ -1,4 +1,14 @@
 
+import './App.css';
+
+function App() {
+	return (
+		<>
+			<h1 className='text-red-900 text-center'>Hellow EveryOne</h1>
+		</>
+	);
+
+
 import './App.css'
 import { Route , Routes } from 'react-router-dom'
 import Homepage from './Pages/Homepage'
@@ -16,4 +26,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
