@@ -1,11 +1,10 @@
+import AllRoute from './component/AllRoute';
 function App() {
-
-  return (
-	<>
-
-	</>
-  )
-
+	return (
+		<>
+			<AllRoute />
+		</>
+	);
 }
 
-export default App
+export default App;

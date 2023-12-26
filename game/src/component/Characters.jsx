@@ -5,6 +5,7 @@ import character3 from '../assets/character-3.png';
 import character5 from '../assets/character-5.png';
 import character6 from '../assets/character-6.png';
 import character7 from '../assets/character-7.png';
+import { Link } from 'react-router-dom';
 import charactersBackground from '../assets/characters-background.jpeg';
 function Characters() {
 	return (
@@ -62,9 +63,11 @@ function Characters() {
 				</div>
 				{/* end div for all characters and start play button */}
 			</section>
-			<div className='flex justify-center'>
-				<button className='w-[20vw] bg-[#8D3333] text-white p-2 rounded-lg'>ابدأ</button>
-			</div>
+			<Link to={'/StagesGame'}>
+				<div className='flex justify-center'>
+					<button className='w-[20vw] bg-[#8D3333] text-white p-2 rounded-lg'>ابدأ</button>
+				</div>
+			</Link>
 		</div>
 	);
 }
