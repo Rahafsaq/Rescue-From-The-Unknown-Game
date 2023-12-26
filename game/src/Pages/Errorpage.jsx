@@ -15,18 +15,10 @@ function Errorpage() {
 
 
 </div>
-
-
     </div>
-
-
-
-
-
-
 
     </>
   )
 }
 
-export default Errorpage
+export default Errorpage ;
