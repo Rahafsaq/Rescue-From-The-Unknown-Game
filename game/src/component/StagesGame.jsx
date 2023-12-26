@@ -8,6 +8,8 @@ import Location2 from "../assets/images/locationIcon2.png";
 import Location1 from "../assets/images/locationIcon1.png";
 import Locked from "../assets/images/locked.png";
 import Paper from "../assets/images/paper.png";
+import "../App.css";
+
 function StagesGame() {
   return (
     <>
@@ -31,12 +33,12 @@ function StagesGame() {
             <div className="grid grid-cols-2 max-sm:grid max-sm:grid-cols-1 max-md:gird max-md:grid-cols-1  ">
               {/* Row-1 Col-1 */}
               <div className=" max-sm:-order-1 ">
-                <div className="relative overflow-hidden p-12 text-center flex justify-center items-center">
+                <div className="relative overflow-hidden p-12 text-center flex justify-center items-center vert-move">
                   <img
                     src={`${City3}`}
                     alt="city-img"
                     width={205}
-                    className="cursor-pointer"
+                    className="cursor-pointer "
                     style={{ filter: `grayscale(100%)` }}
                   />
                   {/* location-locked images box */}
@@ -71,12 +73,12 @@ function StagesGame() {
               </div>
               {/* Row-2 Col-1 */}
               <div className=" max-sm:-order-2 ">
-                <div className="relative overflow-hidden p-12 text-center flex justify-center items-center ">
+                <div className="relative overflow-hidden p-12 text-center flex justify-center items-center vert-move">
                   <img
                     src={`${City2}`}
                     alt="city-img"
                     width={250}
-                    className="cursor-pointer"
+                    className="cursor-pointer "
                     style={{ filter: `grayscale(100%)` }}
                   />
                   {/* location-locked images box */}
@@ -95,13 +97,13 @@ function StagesGame() {
                 </div>
               </div>
               {/* Row-2 Col-2 */}
-              <div className="max-sm:-order-3  ">
+              <div className="max-sm:-order-3 vert-move ">
                 <div className="relative overflow-hidden p-12 text-center flex justify-center items-center">
                   <img
                     src={`${City1}`}
                     alt="city-img"
                     width={250}
-                    className="cursor-pointer"
+                    className="cursor-pointer "
                   />
                   {/* location-locked images box */}
                   <div className="absolute flex ">
