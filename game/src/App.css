@@ -1,3 +1,6 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+
 .vert-move {
   -webkit-animation: mover 1s infinite alternate;
   animation: mover 1s infinite alternate;
@@ -21,4 +24,20 @@
   100% {
     transform: translateY(-7px);
   }
+}
+
+
+
+/* Keyframe animation for character movement */
+@keyframes characterHover {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+/* Apply the animation on hover */
+.character:hover {
+  animation: characterHover 1s infinite;
 }
