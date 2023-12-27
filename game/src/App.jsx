@@ -1,13 +1,15 @@
 
+import AllRoute from './component/AllRoute';
 function App() {
+	return (
+		<>
+			<AllRoute />
+		</>
 
-  return (
-	<>
 
-
-	</>
   )
+
 
 }
 
-export default App
+export default App;

@@ -1,4 +1,4 @@
-import React from 'react';
+
 // import imageBack from '../assets/backgroundMan.jpeg';
 import erth from "../assets/erth.png"
 import searching from '../assets/searching.png'
@@ -94,6 +94,7 @@ function Homepage() {
 
 </>
   );
+
 }
 
 export default Homepage;
