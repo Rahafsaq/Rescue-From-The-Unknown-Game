@@ -1,11 +1,11 @@
 import React from "react";
 import Map360 from "../assets/images/googlemap.png";
 import GreenBG from "../assets/images/greenBG.png";
+import Q1 from "../assets/images/q1.png";
 import Char1 from "../assets/character-1.png";
 import City1 from "../assets/images/city1.png";
 import { Link } from "react-router-dom";
-
-function Popup() {
+function Challenge() {
   return (
     <>
       {/* start section */}
@@ -40,25 +40,25 @@ function Popup() {
                     <div className="text-white absolute right-6 top-3 font-normal text-2xl">
                       X
                     </div>
-                    {/* مرحبا بك في المكان الاول
 
-ابحث عن  “اسم الشخصية” في : 
-
-المواقف السيارات
-الدور الارضي */}
-                    <h3 className="mb-3 text-2xl font-bold text-white dark:text-white">
-                      👋مرحبا بك في المكان الأول
+                    <h3 className="mb-3 text-lg font-medium text-white dark:text-white">
+                      ابدأ التحدي:
                     </h3>
-                    <p className="text-white font-medium leading-9 text-lg">
+                    <p className="text-white font-bold leading-9 text-2xl">
                       {" "}
-                      :ابحث عن اليكس في
+                      ما المقصود من الرموز؟{" "}
                     </p>
-                    <p className="text-white font-medium leading-9 text-lg">
-                      &#128663; مواقف السيارات -
-                    </p>
-                    <p className="text-white font-medium leading-9 text-lg">
-                      &#127968; حديقة المنزل -{" "}
-                    </p>
+                    <div>
+                      <img src={Q1} alt="q1-img" />
+                    </div>
+                  </div>
+                  {/* input */}
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="اكتب هنا"
+                      className="border border-none text-center rounded-sm mb-6 outline-none"
+                    />
                   </div>
                   <div className="flex justify-center items-center pt-0 space-y-4 sm:flex sm:space-y-0">
                     <div className="flex justify-center items-center space-y-4 sm:space-x-4 sm:flex sm:space-y-0">
@@ -69,7 +69,7 @@ function Popup() {
                           type="button"
                           className="py-2 px-11 w-full text-sm font-medium text-center text-white rounded-lg bg-[#8D3333] sm:w-auto"
                         >
-                          ابدأ
+                          تحقق
                         </button>
                       </Link>
                     </div>
@@ -85,4 +85,4 @@ function Popup() {
   );
 }
 
-export default Popup;
+export default Challenge;
