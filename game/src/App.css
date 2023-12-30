@@ -1,3 +1,6 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+
 .vert-move {
   -webkit-animation: mover 1s infinite alternate;
   animation: mover 1s infinite alternate;
@@ -22,3 +25,43 @@
     transform: translateY(-7px);
   }
 }
+
+
+
+/* Keyframe animation for character movement */
+@keyframes characterHover {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+/* Apply the animation on hover */
+.character:hover {
+  animation: characterHover 1s infinite;
+}
+
+/* .tilted-text {
+  transform: rotate(-15deg); 
+  transform-origin: bottom left; 
+} */
+
+/* Tilted text style with vertical movement */
+.tilted-text {
+  transform: rotate(-15deg);
+  transform-origin: bottom left;
+  animation: verticalMoveText 1s infinite alternate;
+}
+
+/* Vertical movement animation for tilted text */
+@keyframes verticalMoveText {
+  0% {
+    transform: rotate(-10deg) translateY(0);
+  }
+  100% {
+    transform: rotate(-15deg) translateY(-20px); /* Adjust the distance as needed */
+  }
+}
+
+
