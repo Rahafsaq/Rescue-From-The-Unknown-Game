@@ -41,3 +41,27 @@
 .character:hover {
   animation: characterHover 1s infinite;
 }
+
+/* .tilted-text {
+  transform: rotate(-15deg); 
+  transform-origin: bottom left; 
+} */
+
+/* Tilted text style with vertical movement */
+.tilted-text {
+  transform: rotate(-15deg);
+  transform-origin: bottom left;
+  animation: verticalMoveText 1s infinite alternate;
+}
+
+/* Vertical movement animation for tilted text */
+@keyframes verticalMoveText {
+  0% {
+    transform: rotate(-10deg) translateY(0);
+  }
+  100% {
+    transform: rotate(-15deg) translateY(-20px); /* Adjust the distance as needed */
+  }
+}
+
+

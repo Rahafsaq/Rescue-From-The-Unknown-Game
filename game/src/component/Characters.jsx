@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
@@ -8,16 +9,84 @@ import character5 from '../assets/character-5.png';
 import character6 from '../assets/character-6.png';
 import character7 from '../assets/character-7.png';
 import goldBackground from '../assets/gold-background.png';
+
+// character click sounds
+import character1Sound from '../assets/audio/character-1-sound.wav';
+import character2Sound from '../assets/audio/character-2-sound.wav';
+import character3Sound from '../assets/audio/character-3-sound.mp3';
+import character5Sound from '../assets/audio/character-5-sound.wav';
+import character6Sound from '../assets/audio/character-6-sound.wav';
+import character7Sound from '../assets/audio/character-7-sound.wav';
 function Characters() {
+	// map for characters with their corresponding audio files
+	const characterAudioMap = {
+		character1: character1Sound,
+		character2: character2Sound,
+		character3: character3Sound,
+		character5: character5Sound,
+		character6: character6Sound,
+		character7: character7Sound,
+	};
+
+	// map of characters to their corresponding images
+	const characterImages = {
+		character1,
+		character2,
+		character3,
+		character5,
+		character6,
+		character7,
+	};
+
+	// map for characters with their Sentence
+	const characterSentence = {
+		character1: 'هو هووو',
+		character2: 'ها هاااي',
+		character3: 'ياااو',
+		character5: 'يا واااو',
+		character6: 'هااااا',
+		character7: 'هي هيهيي ',
+	};
+
 	const [selectedCharacter, setSelectedCharacter] = useState(character1);
+	const [characterName, setCharacterName] = useState('');
+	const [selectedCharacterSentence, setSelectedCharacterSentence] = useState('');
+
+	// Play audio function
+	const playCharacterAudio = (character) => {
+		const audioFile = characterAudioMap[character];
+		const characterAudio = new Audio(audioFile);
+		characterAudio.play();
+	};
 
 	const handleSelectedCharacter = (selected) => {
-		setSelectedCharacter(selected);
+		// Play the character's sound
+		playCharacterAudio(selected);
+
+		// Set the selected character
+		setSelectedCharacter(characterImages[selected]);
+
+		// Set the selected Sentence
+		setSelectedCharacterSentence(characterSentence[selected]);
+	};
+
+	const handlesStartGame = () => {
+		axios
+			.post('https://658d2e7c7c48dce94738a443.mockapi.io/characters', {
+				image: selectedCharacter,
+				name: characterName,
+			})
+			.then(function (response) {
+				console.log(response);
+			})
+			.catch(function (error) {
+				console.log(error);
+			});
 	};
 
 	return (
 		<div className=' bg-[#004B50] h-screen'>
-			<p className='p-6 text-center text-3xl  text-white max-sm:text-lg max-sm:p-5  font-primary'>
+			<p className='p-6 text-center text-3xl  text-white max-sm:text-base max-sm:p-3 font-primary'>
 				اختر الشخصية التي تريد انقاذها
 			</p>
 			<div className='flex justify-center'></div>
@@ -25,17 +94,30 @@ function Characters() {
 			<section className='flex flex-row-reverse max-sm:flex-col gap-6'>
 				{/* start div for selected character and character name*/}
 				<div
-					className='bg-contain w-[45vw] h-[60vh] bg-no-repeat bg-center  bg-[#004B50] max-sm:h-[36vh] max-sm:w-[100vw]'
+					className='bg-contain  w-[45vw] h-[60vh] bg-no-repeat bg-center  bg-[#004B50] max-sm:h-[36vh] max-sm:w-[100vw]'
 					style={{
 						backgroundImage: `url(${goldBackground})`,
 					}}
 				>
 					<div className='flex flex-col gap-32 justify-end h-[72vh] w-[45vw]  items-center max-sm:justify-between max-sm:h-[39vh] max-sm:gap-0 max-sm:w-[100vw]'>
-						<img
-							src={selectedCharacter}
-							className=' w-[14vw] h-[45vh] mt-2 max-sm:h-[26vh] max-sm:w-[24vw] vert-move'
-						/>
+						{/*start selected character and his sentence */}
+						<div className='flex relative justify-center  w-full'>
+							<p className='absolute font-secondary text-[#8D3333] font-bold top-10 text-5xl left-96 max-sm:left-56 max-sm:text-2xl z-10 tilted-text'>
+								{/* هاااا هااي */}
+								{selectedCharacterSentence}
+							</p>
+							<img
+								src={selectedCharacter}
+								className=' w-[14vw] h-[45vh] mt-2 max-sm:h-[26vh] max-sm:w-[24vw] '
+							/>
+						</div>
+						{/*end selected character and his sentence */}
+
 						<input
+							value={characterName}
+							onChange={(e) => {
+								setCharacterName(e.target.value);
+							}}
 							type='text'
 							placeholder='اعطي اسم للشخصية'
 							className='text-center w-[20vw] placeholder:p-1 p-1 rounded-lg bg-[#ECEAEA] max-sm:w-[45vw] font-secondary'
@@ -47,12 +129,12 @@ function Characters() {
 				{/* start All characters */}
 				<div className='flex flex-col items-center w-[100vw] gap-10 mt-20 max-sm:flex-col  max-sm:justify-center max-sm:gap-4 max-sm:mt-4'>
 					{/* start characters in first line */}
-					<div className='flex gap-10 max-sm:gap-8 '>
+					<div className='flex gap-10 max-sm:gap-6 '>
 						{/* char1 */}
 						<div
 							className='flex justify-center bg-[rgba(189,183,182,0.6)] rounded-ss-3xl rounded-ee-3xl w-[11vw] shadow-2xl max-sm:w-[18vw] max-sm:items-center character'
 							onClick={() => {
-								handleSelectedCharacter(character3);
+								handleSelectedCharacter('character3');
 							}}
 						>
 							<img src={character3} className='w-[10vw] h-[20vh] max-sm:h-[16vh] max-sm:w-[18vw]' />
@@ -62,7 +144,7 @@ function Characters() {
 						<div
 							className='flex justify-center bg-[rgba(189,183,182,0.6)] rounded-ss-3xl  rounded-ee-3xl w-[11vw] shadow-2xl max-sm:w-[18vw] max-sm:items-center character'
 							onClick={() => {
-								handleSelectedCharacter(character1);
+								handleSelectedCharacter('character1');
 							}}
 						>
 							<img src={character1} className='w-[6vw] h-[20vh] max-sm:h-[16vh] max-sm:w-[18vw]' />
@@ -71,7 +153,7 @@ function Characters() {
 						<div
 							className='flex justify-center bg-[rgba(189,183,182,0.6)] rounded-ss-3xl  rounded-ee-3xl w-[11vw] shadow-2xl max-sm:w-[18vw] max-sm:items-center character'
 							onClick={() => {
-								handleSelectedCharacter(character2);
+								handleSelectedCharacter('character2');
 							}}
 						>
 							<img src={character2} className='w-[10vw] h-[20vh] max-sm:h-[16vh] max-sm:w-[18vw]' />
@@ -79,12 +161,12 @@ function Characters() {
 					</div>
 					{/* end characters in first line */}
 
-					<div className='flex gap-10 max-sm:gap-8 '>
+					<div className='flex gap-10 max-sm:gap-6 '>
 						{/* char4 */}
 						<div
 							className='flex justify-center bg-[rgba(189,183,182,0.6)] rounded-ss-3xl  rounded-ee-3xl w-[11vw] shadow-2xl max-sm:w-[18vw] max-sm:items-center character'
 							onClick={() => {
-								handleSelectedCharacter(character5);
+								handleSelectedCharacter('character5');
 							}}
 						>
 							<img src={character5} className='w-[8vw] h-[20vh] max-sm:h-[16vh] max-sm:w-[18vw]' />
@@ -93,7 +175,7 @@ function Characters() {
 						<div
 							className='flex justify-center bg-[rgba(189,183,182,0.6)] rounded-ss-3xl  rounded-ee-3xl w-[11vw] shadow-2xl max-sm:w-[18vw] max-sm:items-center character'
 							onClick={() => {
-								handleSelectedCharacter(character6);
+								handleSelectedCharacter('character6');
 							}}
 						>
 							<img src={character6} className='w-[8vw] h-[20vh] max-sm:h-[16vh] max-sm:w-[18vw]' />
@@ -102,7 +184,7 @@ function Characters() {
 						<div
 							className='flex justify-center bg-[rgba(189,183,182,0.6)] rounded-ss-3xl  rounded-ee-3xl w-[11vw] shadow-2xl max-sm:w-[18vw] max-sm:items-center character'
 							onClick={() => {
-								handleSelectedCharacter(character7);
+								handleSelectedCharacter('character7');
 							}}
 						>
 							<img src={character7} className='w-[8vw] h-[20vh] max-sm:h-[16vh] max-sm:w-[18vw]' />
@@ -113,7 +195,10 @@ function Characters() {
 			</section>
 			<Link to={'/StagesGame'}>
 				<div className='flex justify-center  h-[20vh] max-sm:h-[8vh] items-end '>
-					<button className='w-[20vw] bg-[#8D3333] text-white p-2 rounded-lg max-sm:mt-3 max-sm:w-[40vw] font-secondary'>
+					<button
+						onClick={handlesStartGame}
+						className='w-[20vw] bg-[#8D3333] text-white p-2 rounded-lg max-sm:mt-3 max-sm:w-[40vw] font-secondary'
+					>
 						ابدأ
 					</button>
 				</div>
@@ -123,110 +208,3 @@ function Characters() {
 }
 
 export default Characters;
-
-// import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import '../App.css';
-// import character1 from '../assets/character-1.png';
-// import character2 from '../assets/character-2.png';
-// import character3 from '../assets/character-3.png';
-// import character5 from '../assets/character-5.png';
-// import character6 from '../assets/character-6.png';
-// import character7 from '../assets/character-7.png';
-// import charactersBackground from '../assets/characters-background.jpeg';
-
-// function Characters() {
-// 	const [selectedCharacter, setSelectedCharacter] = useState(character1);
-
-// 	const handleCharacterClick = (characterImage) => {
-// 		setSelectedCharacter(characterImage);
-// 	};
-
-// 	return (
-// 		<div className=' bg-[#004B50] h-screen'>
-// 			<p className='p-5 text-center text-3xl  text-white max-sm:text-2xl max-sm:p-8  font-primary'>
-// 				اختر الشخصية التي تريد انقاذها
-// 			</p>
-// 			<div className='flex justify-center'></div>
-
-// 			<section className='flex flex-row-reverse max-sm:flex-col'>
-// 				<div
-// 					className='bg-contain w-[45vw] h-[60vh] bg-no-repeat bg-center  bg-[#004B50] max-sm:h-[35vh] max-sm:w-[100vw]'
-// 					style={{
-// 						backgroundImage: `url(${charactersBackground})`,
-// 					}}
-// 				>
-// 					<div className='flex flex-col gap-32 justify-end h-[72vh] w-[45vw] items-center max-sm:h-[26vh] max-sm:w-[100vw]'>
-// 						<img
-// 							src={selectedCharacter}
-// 							className=' w-[14vw] h-[45vh] mt-2 max-sm:h-[35vh] max-sm:w-[20vw] vert-move'
-// 						/>
-// 						<input
-// 							type='text'
-// 							placeholder='اعطي اسم للشخصية'
-// 							className='text-center w-[20vw] placeholder:p-1 p-1 rounded-lg bg-[#ECEAEA] max-sm:w-[45vw] font-secondary'
-// 						/>
-// 					</div>
-// 				</div>
-
-// 				<div className='flex flex-col items-center w-[100vw] gap-10 mt-20 max-sm:flex-col  max-sm:justify-center max-sm:gap-4 max-sm:mt-4'>
-// 					<div className='flex gap-10 max-sm:gap-8 '>
-// 						<div
-// 							className='flex justify-center bg-[rgba(189,183,182,0.6)] rounded-ss-3xl rounded-ee-3xl w-[11vw] shadow-2xl max-sm:w-[18vw] max-sm:items-center character'
-// 							onClick={() => handleCharacterClick(character3)}
-// 						>
-// 							<img src={character3} className='w-[10vw] h-[20vh] max-sm:h-[16vh] max-sm:w-[18vw]' />
-// 						</div>
-
-// 						<div
-// 							className='flex justify-center bg-[rgba(189,183,182,0.6)] rounded-ss-3xl  rounded-ee-3xl w-[11vw] shadow-2xl max-sm:w-[18vw] max-sm:items-center character'
-// 							onClick={() => handleCharacterClick(character1)}
-// 						>
-// 							<img src={character1} className='w-[6vw] h-[20vh] max-sm:h-[16vh] max-sm:w-[18vw]' />
-// 						</div>
-
-// 						<div
-// 							className='flex justify-center bg-[rgba(189,183,182,0.6)] rounded-ss-3xl  rounded-ee-3xl w-[11vw] shadow-2xl max-sm:w-[18vw] max-sm:items-center character'
-// 							onClick={() => handleCharacterClick(character2)}
-// 						>
-// 							<img src={character2} className='w-[10vw] h-[20vh] max-sm:h-[16vh] max-sm:w-[18vw]' />
-// 						</div>
-// 					</div>
-
-// 					<div className='flex gap-10 max-sm:gap-8 '>
-// 						<div
-// 							className='flex justify-center bg-[rgba(189,183,182,0.6)] rounded-ss-3xl  rounded-ee-3xl w-[11vw] shadow-2xl max-sm:w-[18vw] max-sm:items-center character'
-// 							onClick={() => handleCharacterClick(character5)}
-// 						>
-// 							<img src={character5} className='w-[8vw] h-[20vh] max-sm:h-[16vh] max-sm:w-[18vw]' />
-// 						</div>
-
-// 						<div
-// 							className='flex justify-center bg-[rgba(189,183,182,0.6)] rounded-ss-3xl  rounded-ee-3xl w-[11vw] shadow-2xl max-sm:w-[18vw] max-sm:items-center character'
-// 							onClick={() => handleCharacterClick(character6)}
-// 						>
-// 							<img src={character6} className='w-[8vw] h-[20vh] max-sm:h-[16vh] max-sm:w-[18vw]' />
-// 						</div>
-
-// 						<div
-// 							className='flex justify-center bg-[rgba(189,183,182,0.6)] rounded-ss-3xl  rounded-ee-3xl w-[11vw] shadow-2xl max-sm:w-[18vw] max-sm:items-center character'
-// 							onClick={() => handleCharacterClick(character7)}
-// 						>
-// 							<img src={character7} className='w-[8vw] h-[20vh] max-sm:h-[16vh] max-sm:w-[18vw]' />
-// 						</div>
-// 					</div>
-// 				</div>
-// 			</section>
-
-// 			<Link to={'/StagesGame'}>
-// 				<div className='flex justify-center  h-[20vh] items-end '>
-// 					<button className='w-[20vw] bg-[#8D3333] text-white p-2 rounded-lg max-sm:mt-3 max-sm:w-[40vw] font-secondary'>
-// 						ابدأ
-// 					</button>
-// 				</div>
-// 			</Link>
-// 		</div>
-// 	);
-// }
-
-// export default Characters;
