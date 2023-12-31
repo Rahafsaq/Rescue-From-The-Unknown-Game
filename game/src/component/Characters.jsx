@@ -76,13 +76,16 @@ function Characters() {
 		if (characterName === '') {
 			setShowAlert('من فضلك أبدع في اعطاء اسم للشخصية');
 		} else {
-			axios
-				.post('https://658d2e7c7c48dce94738a443.mockapi.io/characters', {
+
+
+			axios.post('https://658d2e7c7c48dce94738a443.mockapi.io/characters', {
 					image: selectedCharacter,
 					name: characterName,
 				})
 				.then(function (response) {
 					console.log(response);
+					localStorage.setItem('image', selectedCharacter)
+					localStorage.setItem('name', characterName)
 				})
 				.catch(function (error) {
 					console.log(error);

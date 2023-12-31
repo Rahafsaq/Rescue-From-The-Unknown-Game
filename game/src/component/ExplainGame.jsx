@@ -5,8 +5,32 @@ import Trophy2 from '../assets/images/Trophy2.png';
 import City2 from '../assets/images/city2.png';
 import ManSearch from '../assets/images/man-search.png';
 import SecondryBG from '../assets/images/secondryBG.png';
+import { useParams } from "react-router-dom";
+import axios from 'axios';
+
+
 
 function ExplainGame() {
+	// const [charname, setcharname] = React.useState([]);
+	// // const { id } = useParams();
+
+	// React.useEffect(() => {
+	// 	axios
+	// 	  .get(`https://658d2e7c7c48dce94738a443.mockapi.io/characters`)
+	
+	// 	  .then((res) => {
+	// 		console.log(res.data);
+	// 		setcharname(res.data);
+	// 		localStorage.setItem('id', charname.id)
+	// 	  })
+	// 	  .catch((error) => {
+	// 		console.log(error);
+	// 	  });
+	//   }, []);
+
+
+
+
 	return (
 		<>
 			{/* start section */}
@@ -69,7 +93,8 @@ function ExplainGame() {
 							{/* Button */}
 
 							<div className='z-10 flex justify-center w-52 rounded-md p-2 font-bold text-white  absolute bottom-8 bg-[#8D3333]'>
-								<Link to={'/Popup'}>
+								{/* <Link to={`/Popup/${charname.id}`}> */}
+								<Link to={`/Popup`}>
 									<button>ابدأ اللعبة</button>
 								</Link>
 							</div>
