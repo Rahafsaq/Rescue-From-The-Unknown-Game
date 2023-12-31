@@ -1,11 +1,51 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Map360 from "../assets/images/googlemap.png";
 import GreenBG from "../assets/images/greenBG.png";
 import Char1 from "../assets/character-1.png";
 import City1 from "../assets/images/city1.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Popup() {
+
+const id = localStorage.getItem("id")
+console.log(id);
+  const [cityname , setCityname] = useState("")
+  const [charname , setcharname] = useState("")
+  useEffect(() => {
+    axios.get(`https://658d2e7c7c48dce94738a443.mockapi.io/gamedate/${id}`)
+
+      .then((res) => {
+        console.log(res.data);
+        setCityname(res.data.cityname);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+
+      axios.get(`https://658d2e7c7c48dce94738a443.mockapi.io/characters/${id}`)
+
+      .then((res) => {
+        console.log(res.data);
+        setcharname(res.data.name);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+  }, []);
+
+
+
+
+
+ 
+
+
+
+
+
   return (
     <>
       {/* start section */}
@@ -40,18 +80,14 @@ function Popup() {
                     <div className="text-white absolute right-6 top-3 font-normal text-2xl">
                       X
                     </div>
-                    {/* مرحبا بك في المكان الاول
 
-ابحث عن  “اسم الشخصية” في : 
+                    <h3  className="mb-3 text-2xl font-bold text-white dark:text-white">
+                      👋مرحبا بك في {`${cityname}`}
 
-المواقف السيارات
-الدور الارضي */}
-                    <h3 className="mb-3 text-2xl font-bold text-white dark:text-white">
-                      👋مرحبا بك في المكان الأول
                     </h3>
                     <p className="text-white font-medium leading-9 text-lg">
                       {" "}
-                      :ابحث عن اليكس في
+                      : {`${charname}`} ابحث عن في
                     </p>
                     <p className="text-white font-medium leading-9 text-lg">
                       &#128663; مواقف السيارات -

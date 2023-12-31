@@ -10,9 +10,70 @@ import Location2 from '../assets/images/locationIcon2.png';
 import Locked from '../assets/images/locked.png';
 import Mapbg from '../assets/images/mapbg.png';
 import Paper from '../assets/images/paper.png';
+import axios from 'axios';
 function StagesGame() {
+
+	const handleSelectCity = (id) => {
+
+		// console.log(cityimage);
+		// axios.post('https://658d2e7c7c48dce94738a443.mockapi.io/gamedate', {
+		// 		cityimage : cityimage ,
+		// 		cityname: cityname 
+		// 	})
+			
+		// 	.then(function (response) {
+		// 		console.log(response);
+		// 	})
+		// 	.catch(function (error) {
+		// 		console.log(error);
+		// 	});
+		// 	console.log(cityimage)
+
+		localStorage.setItem("id" , id)
+
+	};
+
+
+	const fillAPIWithData = async () => {
+		const cityData = [
+		  {
+			cityname: "City 1",
+			cityimage: City1,
+		  },
+		  {
+			cityname: "City 2",
+			cityimage: City2,
+		  },
+		  {
+			cityname: "City 3",
+			cityimage: City3,
+		  },
+		];
+	
+		try {
+		  const existingCities = await axios.get("https://658d2e7c7c48dce94738a443.mockapi.io/gamedate");
+	
+		  // Check if the API is already populated
+		  if (existingCities.data.length === 0) {
+			for (const city of cityData) {
+			  await axios.post("https://658d2e7c7c48dce94738a443.mockapi.io/gamedate", city);
+
+			}
+	
+			console.log("API filled with data successfully");
+		  } else {
+			console.log("API is already populated");
+		  }
+		} catch (error) {
+		  console.log(error);
+		}
+	  };
+	
+	  fillAPIWithData();
+
 	return (
 		<>
+
 			{/* start section */}
 			<section className='min-h-screen w-scree'>
 				{/* image Background */}
@@ -22,8 +83,8 @@ function StagesGame() {
 						backgroundImage: `url(${Mapbg})`,
 						backgroundSize: `cover`,
 						backgroundPosition: `center`,
-					}}
-				>
+					}}>
+					
 					<div
 						className='absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed max-sm:overflow-auto max-md:overflow-auto'
 						style={{ backgroundColor: `rgba(0, 0, 0, 0.3)` }}
@@ -99,7 +160,8 @@ function StagesGame() {
 							{/* Row-2 Col-2 */}
 							<div className='max-sm:-order-3 vert-move '>
 								<div className='relative overflow-hidden p-12 text-center flex justify-center items-center'>
-									<Link to={'/ExplainGame'}>
+									<Link to={'/ExplainGame'} onClick ={ () =>  handleSelectCity (1)}  >
+										
 										<img src={`${City1}`} alt='city-img' width={250} className='cursor-pointer ' />
 									</Link>
 

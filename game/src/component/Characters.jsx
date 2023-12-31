@@ -84,6 +84,7 @@ function Characters() {
 			});
 	};
 
+
 	return (
 		<div className=' bg-[#004B50] h-screen'>
 			<p className='p-6 text-center text-3xl  text-white max-sm:text-base max-sm:p-3 font-primary'>

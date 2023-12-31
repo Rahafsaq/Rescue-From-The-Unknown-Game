@@ -4,8 +4,40 @@ import Prsion from "../assets/images/prsion.png";
 import Char1 from "../assets/character-1.png";
 import City1 from "../assets/images/city1.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useState , useEffect } from "react";
 
 function FindChar() {
+
+
+  const id = localStorage.getItem("id")
+console.log(id);
+  const [cityimage , setCityimage] = useState("")
+  const [charname , setcharname] = useState("")
+  useEffect(() => {
+    axios.get(`https://658d2e7c7c48dce94738a443.mockapi.io/gamedate/${id}`)
+
+      .then((res) => {
+        console.log(res.data);
+        setCityimage(res.data.cityimage);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+
+      axios.get(`https://658d2e7c7c48dce94738a443.mockapi.io/characters/${id}`)
+
+      .then((res) => {
+        console.log(res.data);
+        setcharname(res.data.name);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+  }, []);
+
   return (
     <>
       {/* start section */}
@@ -26,13 +58,13 @@ function FindChar() {
           >
             {/* title */}
             <div className="flex justify-end gap-[480px] text-center items-center w-full text-white font-bold mt-4 mb-2">
-              <p className="text-2xl">الان عليك البحث وانقاذ اليكس</p>
+              <p className="text-2xl">  {`${charname}`}الان عليك البحث وانقاذ </p>
               <p className="">الشخصية المفقودة</p>
             </div>
             {/* Nav Bar */}
             <nav className="flex justify-between items-center w-1/2 ">
               {/* city Stage */}
-              <img src={City1} alt="city-img" width={150} className="" />
+              <img src={`${cityimage}`} alt="city-img" width={150} className="" />
               {/* char and time */}
               <div>
                 <div className="flex justify-center items-center ">
