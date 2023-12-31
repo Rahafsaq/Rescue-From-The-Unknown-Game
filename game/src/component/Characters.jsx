@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../App.css';
 import character1 from '../assets/character-1.png';
 import character2 from '../assets/character-2.png';
@@ -18,6 +18,7 @@ import character5Sound from '../assets/audio/character-5-sound.wav';
 import character6Sound from '../assets/audio/character-6-sound.wav';
 import character7Sound from '../assets/audio/character-7-sound.wav';
 function Characters() {
+	const navigate = useNavigate();
 	// map for characters with their corresponding audio files
 	const characterAudioMap = {
 		character1: character1Sound,
@@ -51,6 +52,7 @@ function Characters() {
 	const [selectedCharacter, setSelectedCharacter] = useState(character1);
 	const [characterName, setCharacterName] = useState('');
 	const [selectedCharacterSentence, setSelectedCharacterSentence] = useState('');
+	const [showAlert, setShowAlert] = useState('');
 
 	// Play audio function
 	const playCharacterAudio = (character) => {
@@ -71,17 +73,23 @@ function Characters() {
 	};
 
 	const handlesStartGame = () => {
-		axios
-			.post('https://658d2e7c7c48dce94738a443.mockapi.io/characters', {
-				image: selectedCharacter,
-				name: characterName,
-			})
-			.then(function (response) {
-				console.log(response);
-			})
-			.catch(function (error) {
-				console.log(error);
-			});
+		if (characterName === '') {
+			setShowAlert('من فضلك أبدع في اعطاء اسم للشخصية');
+		} else {
+			axios
+				.post('https://658d2e7c7c48dce94738a443.mockapi.io/characters', {
+					image: selectedCharacter,
+					name: characterName,
+				})
+				.then(function (response) {
+					console.log(response);
+				})
+				.catch(function (error) {
+					console.log(error);
+				});
+
+			navigate('/StagesGame');
+		}
 	};
 
 	return (
@@ -99,10 +107,10 @@ function Characters() {
 						backgroundImage: `url(${goldBackground})`,
 					}}
 				>
-					<div className='flex flex-col gap-32 justify-end h-[72vh] w-[45vw]  items-center max-sm:justify-between max-sm:h-[39vh] max-sm:gap-0 max-sm:w-[100vw]'>
+					<div className='flex flex-col gap-32 h-[72vh] w-[45vw]  items-center max-sm:gap-12 max-sm:h-[48vh] max-sm:w-[100vw]'>
 						{/*start selected character and his sentence */}
 						<div className='flex relative justify-center  w-full'>
-							<p className='absolute font-secondary text-[#8D3333] font-bold top-10 text-5xl left-96 max-sm:left-56 max-sm:text-2xl z-10 tilted-text'>
+							<p className='absolute font-secondary text-white font-bold top-10 text-5xl left-96 max-sm:left-56 max-sm:text-2xl z-10 tilted-text'>
 								{/* هاااا هااي */}
 								{selectedCharacterSentence}
 							</p>
@@ -112,24 +120,26 @@ function Characters() {
 							/>
 						</div>
 						{/*end selected character and his sentence */}
-
-						<input
-							value={characterName}
-							onChange={(e) => {
-								setCharacterName(e.target.value);
-							}}
-							type='text'
-							placeholder='اعطي اسم للشخصية'
-							className='text-center w-[20vw] placeholder:p-1 p-1 rounded-lg bg-[#ECEAEA] max-sm:w-[45vw] font-secondary'
-						/>
+						<div className='flex flex-col items-center gap-1'>
+							<input
+								value={characterName}
+								onChange={(e) => {
+									setCharacterName(e.target.value);
+								}}
+								type='text'
+								placeholder='اعطي اسم للشخصية'
+								className='text-center w-[20vw] placeholder:p-1 p-1 rounded-lg bg-[#ECEAEA] max-sm:w-[45vw] font-secondary'
+							/>
+							<p className='text-[#d85555] font-semibold  p-1'>{showAlert}</p>
+						</div>
 					</div>
 				</div>
 				{/* end div for selected character and character name*/}
 
 				{/* start All characters */}
-				<div className='flex flex-col items-center w-[100vw] gap-10 mt-20 max-sm:flex-col  max-sm:justify-center max-sm:gap-4 max-sm:mt-4'>
+				<div className='flex flex-col items-center w-[100vw] gap-10 mt-20 max-sm:flex-col  max-sm:justify-center max-sm:gap-4 max-sm:mt-10'>
 					{/* start characters in first line */}
-					<div className='flex gap-10 max-sm:gap-6 '>
+					<div className='flex gap-10 max-sm:gap-8 '>
 						{/* char1 */}
 						<div
 							className='flex justify-center bg-[rgba(189,183,182,0.6)] rounded-ss-3xl rounded-ee-3xl w-[11vw] shadow-2xl max-sm:w-[18vw] max-sm:items-center character'
@@ -161,7 +171,7 @@ function Characters() {
 					</div>
 					{/* end characters in first line */}
 
-					<div className='flex gap-10 max-sm:gap-6 '>
+					<div className='flex gap-10 max-sm:gap-8 '>
 						{/* char4 */}
 						<div
 							className='flex justify-center bg-[rgba(189,183,182,0.6)] rounded-ss-3xl  rounded-ee-3xl w-[11vw] shadow-2xl max-sm:w-[18vw] max-sm:items-center character'
@@ -193,16 +203,16 @@ function Characters() {
 				</div>
 				{/* end All characters */}
 			</section>
-			<Link to={'/StagesGame'}>
-				<div className='flex justify-center  h-[20vh] max-sm:h-[8vh] items-end '>
-					<button
-						onClick={handlesStartGame}
-						className='w-[20vw] bg-[#8D3333] text-white p-2 rounded-lg max-sm:mt-3 max-sm:w-[40vw] font-secondary'
-					>
-						ابدأ
-					</button>
-				</div>
-			</Link>
+			{/* <Link to={'/StagesGame'}> */}
+			<div className='flex justify-center  h-[20vh] max-sm:h-[8vh] items-end max-sm:mt-3 '>
+				<button
+					onClick={handlesStartGame}
+					className='w-[20vw] bg-[#8D3333] text-white p-2 rounded-lg  max-sm:w-[40vw] font-secondary'
+				>
+					ابدأ
+				</button>
+			</div>
+			{/* </Link> */}
 		</div>
 	);
 }
