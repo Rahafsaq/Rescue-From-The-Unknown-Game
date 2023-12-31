@@ -8,6 +8,8 @@ import ExplainGame from "../component/ExplainGame.jsx";
 import Popup from "../component/Popup.jsx";
 import FindChar from "./FindChar.jsx";
 import Challenge from "./Challenge.jsx";
+import StreetViewMap from "./StreetViewMap.jsx";
+
 import Test from "./Test.jsx";
 
 
@@ -24,6 +26,7 @@ function AllRoute() {
         <Route path="/Popup" element={<Popup />} />
         <Route path="/FindChar" element={<FindChar />} />
         <Route path="/Challenge" element={<Challenge />} />
+        <Route path="/StreetViewMap" element={<StreetViewMap />} />
         <Route path="/Test" element={<Test />} />
       </Routes>
     </div>
