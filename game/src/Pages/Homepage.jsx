@@ -135,53 +135,10 @@ function Homepage() {
             </div>
           </footer>
         </div>
+
         
-        {/* <div className="relative bg-[#5B776D] p-12 text-center min-h-screen  max-sm:overflow-auto max-md:overflow-auto">
-          <h1 className="text-5xl font-bold text-white text-center p-20 max-sm:text-4xl">
-            طريقة اللعبة
-          </h1>
+        
 
-          <div className="flex items-center justify-center w-4/5 m-auto  max-sm:flex max-sm:flex-col ">
-            <div className="flex justify-around items-center w-full">
-              <h1 className="text-white font-serif w-[50vw] mt-12 text-4xl leading-snug text-right">
-                مشروعنا عبارة عن لعبة تفاعلية حيث يختار اللاعبون شخصية من
-                الشخصيات المحددة ويبدأون اللعب في مغامرة قائمة على البحث عبر
-                مواقع محددة
-              </h1>
-              <div className=" ">
-                <img className="ml-10 " src={erth} alt="" width={500} />
-              </div>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center w-4/5 m-auto max-sm:flex max-sm:flex-col">
-            <div>
-              <img className="" src={searching} alt="" width={500} />
-            </div>
-            <div className="flex justify-around items-center w-full">
-              <h1 className="text-white font-serif w-[50vw] mt-12 text-4xl leading-snug text-right">
-                سيتم توزيع كل نسخة من نسخ الشخصية على مواقع عشوائية على خرائط
-                Google ويحتاج اللاعب إلى بدء البحث عن نسخ الشخصيات باستخدام
-                التجوّل الافتراضي في خرائط Google
-              </h1>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center w-4/5 m-auto max-sm:flex max-sm:flex-col  ">
-            <div className="flex justify-around items-center w-full">
-              <h1 className="text-white font-serif w-[50vw] mt-12 text-4xl leading-snug text-right">
-
-
-                في كل موقع سيواجه اللاعبون تحديات متعددة يجب عليهم حلها لتحرير
-                نسخ شخصياتهم والفوز باللعبة
-
-
-              </h1>
-            </div>
-
-
-
-   */}
       </section>
      
     </>
