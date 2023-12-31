@@ -43,7 +43,7 @@ function Homepage() {
                 </button>
                 
                 </Link>
-             
+
               </div>
               {/* Images */}
               <div className=" flex flex-col items-center  relative h-full ">
@@ -136,7 +136,7 @@ function Homepage() {
           </footer>
         </div>
 
-        
+
         
 
       </section>

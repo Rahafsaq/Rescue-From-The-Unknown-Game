@@ -20,6 +20,7 @@ function AllRoute() {
         <Route path="/Characters" element={<Characters />} />
         <Route path="/StagesGame" element={<StagesGame />} />
         <Route path="/ExplainGame" element={<ExplainGame />} />
+        {/* <Route path="/Popup/:id" element={<Popup />} /> */}
         <Route path="/Popup" element={<Popup />} />
         <Route path="/FindChar" element={<FindChar />} />
         <Route path="/Challenge" element={<Challenge />} />
