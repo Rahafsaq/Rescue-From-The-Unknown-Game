@@ -33,6 +33,7 @@ function FindChar() {
   // }
 
   // window.initialize = initialize;
+  const [time, setTime] = useState(5 * 60); // بالثواني
 
   const id = localStorage.getItem("id");
   console.log(id);
@@ -61,6 +62,17 @@ function FindChar() {
         console.log(error);
       });
   }, []);
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setTime((prevTime) => prevTime - 1);
+  //   }, 1000); // يقوم بتحديث الوقت كل ثانية واحدة
+
+  //   return () => clearInterval(interval); // يتم إلغاء الفاصل الزمني عندما يتم تفكيك العنصر
+  // }, []);
+
+  // const minutes = Math.floor(time / 60);
+  // const seconds = time % 60;
 
   return (
     <>
@@ -103,9 +115,10 @@ function FindChar() {
                   <img src={Char1} alt="charcters-img" width={100} />
                   <p className="text-white font-semibold text-2xl mt-16 ">1</p>
                 </div>
-                <p className="text-white bg-[#5b776da2] p-1 rounded-lg border-4 border-[#5B776D] font-bold">
-                  4:30
-                </p>
+                {/* <div>
+                  {minutes.toString().padStart(2, "0")}:
+                  {seconds.toString().padStart(2, "0")}
+                </div> */}
               </div>
               {/* <p>الشخصية المفقودة</p> */}
               {/* logo */}
