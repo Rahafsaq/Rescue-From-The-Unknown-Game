@@ -14,7 +14,7 @@ import axios from 'axios';
 function StagesGame() {
 
 	const handleSelectCity = (id) => {
-
+		
 		// console.log(cityimage);
 		// axios.post('https://658d2e7c7c48dce94738a443.mockapi.io/gamedate', {
 		// 		cityimage : cityimage ,
@@ -51,7 +51,7 @@ function StagesGame() {
 		];
 	
 		try {
-		  const existingCities = await axios.get("https://658d2e7c7c48dce94738a443.mockapi.io/gamedate");
+		const existingCities = await axios.get("https://658d2e7c7c48dce94738a443.mockapi.io/gamedate");
 	
 		  // Check if the API is already populated
 		  if (existingCities.data.length === 0) {
