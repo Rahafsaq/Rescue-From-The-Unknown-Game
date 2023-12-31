@@ -8,9 +8,7 @@ import ExplainGame from "../component/ExplainGame.jsx";
 import Popup from "../component/Popup.jsx";
 import FindChar from "./FindChar.jsx";
 import Challenge from "./Challenge.jsx";
-import Test from "./Test.jsx";
-import Home2 from "../Pages/Home2.jsx";
-
+import StreetViewMap from "./StreetViewMap.jsx";
 
 function AllRoute() {
   return (
@@ -23,8 +21,7 @@ function AllRoute() {
         <Route path="/Popup" element={<Popup />} />
         <Route path="/FindChar" element={<FindChar />} />
         <Route path="/Challenge" element={<Challenge />} />
-        <Route path="/Test" element={<Test />} />
-        <Route path="/Home2" element={<Home2 />} />
+        <Route path="/StreetViewMap" element={<StreetViewMap />} />
       </Routes>
     </div>
   );
