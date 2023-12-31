@@ -9,6 +9,7 @@ import Popup from "../component/Popup.jsx";
 import FindChar from "./FindChar.jsx";
 import Challenge from "./Challenge.jsx";
 
+
 function AllRoute() {
   return (
     <div>

@@ -15,8 +15,9 @@ function Homepage() {
       style={{
         backgroundImage: `url(${Frame9})`,
         backgroundPosition: `center`,
-        
-        }} >
+
+
+     }} >
 
 <div className='flex flex-col items-center justify-center h-screen'>
   <div className='rounded-xl w-[40vw] h-[30vh]'>
