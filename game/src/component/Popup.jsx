@@ -17,6 +17,8 @@ import axios from "axios";
 //   }}
 
 function Popup() {
+
+  
   const id = localStorage.getItem("id");
   console.log(id);
   const [cityname, setCityname] = useState("");
