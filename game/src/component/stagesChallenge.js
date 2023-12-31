@@ -3,6 +3,7 @@ import penguin from '../assets/penguin.png';
 let challenges = [
 	// start challenge 1
 	{
+		id: '1',
 		name: 'التحدي الأول',
 		image: '',
 		question: {
@@ -15,6 +16,7 @@ let challenges = [
 
 	// start challenge 2
 	{
+		id: '2',
 		name: 'التحدي الثاني',
 		image: '',
 		question: {
@@ -27,6 +29,7 @@ let challenges = [
 	// start challenge 3
 
 	{
+		id: '3',
 		name: 'التحدي الثالث',
 		image: '',
 		question: {
@@ -39,6 +42,7 @@ let challenges = [
 	// start challenge 4
 
 	{
+		id: '4',
 		name: 'التحدي الرابع',
 		image: '',
 		question: {
@@ -52,6 +56,7 @@ let challenges = [
 	// start challenge 5
 
 	{
+		id: '5',
 		name: 'التحدي الخامس',
 		image: '',
 		question: {
@@ -64,6 +69,7 @@ let challenges = [
 	// start challenge 6
 
 	{
+		id: '6',
 		name: 'التحدي السادس',
 		image: { girlPower },
 		question: {
@@ -76,8 +82,9 @@ let challenges = [
 	// start challenge 7
 
 	{
+		id: '7',
 		name: 'التحدي السابع',
-		image: {penguin},
+		image: { penguin },
 		question: {
 			questionTitle: ' ما الحيوان المقصود من الرمز؟',
 			options: [''],
