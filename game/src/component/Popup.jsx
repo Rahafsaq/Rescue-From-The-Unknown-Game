@@ -17,6 +17,8 @@ import axios from "axios";
 //   }}
 
 function Popup() {
+  const charName = localStorage.getItem("name");
+  const charImage = localStorage.getItem("image");
   const id = localStorage.getItem("id");
   console.log(id);
   const [cityname, setCityname] = useState("");
@@ -70,7 +72,7 @@ function Popup() {
                   مرحبا بك في {cityname}
                 </h3>
                 <p className="text-white font-medium text-center leading-9 text-lg">
-                  :ابحث عن {charname} في
+                  :ابحث عن {charName} في
                 </p>
                 <p className="text-white font-medium text-center leading-9 text-lg">
                   &#128663; مواقف السيارات -
