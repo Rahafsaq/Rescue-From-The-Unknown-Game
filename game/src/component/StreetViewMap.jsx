@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
-import axios from "axios";
 
 function StreetViewMap() {
   const [map, setMap] = useState(null);
