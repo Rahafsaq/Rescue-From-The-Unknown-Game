@@ -1,11 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Map360 from "../assets/images/googlemap.png";
 import Prsion from "../assets/images/prsion.png";
 import Char1 from "../assets/character-1.png";
 import City1 from "../assets/images/city1.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function FindChar() {
+  //axios
+  // useEffect(()=>{
+  //   // call api
+  // },[])
+
+  // get google map api
+  // axios.get(`https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY`)
+  // .then((res)=>{
+  //   console.log(res)
+  // })
+  // .catch((err)=>{console.log("there is an error: " + err)})
+  // let panorama;
+
+  // function initialize() {
+  //   panorama = new google.maps.StreetViewPanorama(
+  //     document.getElementById("street-view"),
+  //     {
+  //       position: { lat: 37.86926, lng: -122.254811 },
+  //       pov: { heading: 165, pitch: 0 },
+  //       zoom: 1,
+  //     }
+  //   );
+  // }
+
+  // window.initialize = initialize;
   return (
     <>
       {/* start section */}
