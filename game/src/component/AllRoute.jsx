@@ -10,6 +10,8 @@ import FindChar from "./FindChar.jsx";
 import Challenge from "./Challenge.jsx";
 import Test from "./Test.jsx";
 import Home2 from "../Pages/Home2.jsx";
+
+
 function AllRoute() {
   return (
     <div>
