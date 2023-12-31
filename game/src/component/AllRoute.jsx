@@ -19,7 +19,7 @@ function AllRoute() {
         <Route path="/ExplainGame" element={<ExplainGame />} />
         <Route path="/Popup" element={<Popup />} />
         <Route path="/FindChar" element={<FindChar />} />
-        <Route path="/Challenge" element={<Challenge />} />
+        <Route path="/Challenge/:challengeId" element={<Challenge />} />
         <Route path="/StreetViewMap" element={<StreetViewMap />} />
       </Routes>
     </div>
