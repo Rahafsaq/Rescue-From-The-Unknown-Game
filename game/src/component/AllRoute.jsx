@@ -10,10 +10,6 @@ import FindChar from "./FindChar.jsx";
 import Challenge from "./Challenge.jsx";
 import StreetViewMap from "./StreetViewMap.jsx";
 
-import Test from "./Test.jsx";
-
-
-
 function AllRoute() {
   return (
     <div>
@@ -27,7 +23,6 @@ function AllRoute() {
         <Route path="/FindChar" element={<FindChar />} />
         <Route path="/Challenge" element={<Challenge />} />
         <Route path="/StreetViewMap" element={<StreetViewMap />} />
-        <Route path="/Test" element={<Test />} />
       </Routes>
     </div>
   );
