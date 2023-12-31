@@ -1,6 +1,6 @@
 import React from "react";
 import Map360 from "../assets/images/googlemap.png";
-import GreenBG from "../assets/images/greenBG.png";
+// import GreenBG from "../assets/images/greenBG.png";
 import Q1 from "../assets/images/q1.png";
 import Char1 from "../assets/character-1.png";
 import City1 from "../assets/images/city1.png";
