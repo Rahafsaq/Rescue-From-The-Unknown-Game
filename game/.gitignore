@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# js-samples
+js-samples/
+#componnets
+StreetViewMap.jsx

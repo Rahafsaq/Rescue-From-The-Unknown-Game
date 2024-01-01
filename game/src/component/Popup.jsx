@@ -83,7 +83,7 @@ function Popup() {
               </div>
               <div className="z-10 relative flex justify-center items-center pt-0 space-y-4 sm:flex sm:space-y-0">
                 <div className="flex justify-center items-center space-y-4 sm:space-x-4 sm:flex sm:space-y-0">
-                  <Link to={"/FindChar"}>
+                  <Link to={"/Stagel"}>
                     <button
                       id="confirm-button"
                       type="button"
