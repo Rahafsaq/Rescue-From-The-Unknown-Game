@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
-import axios from "axios";
+import Char1 from "../assets/character-1.png";
+import NavBar from "./NavBar";
 
 function StreetViewMap() {
   const [map, setMap] = useState(null);
   const [panorama, setPanorama] = useState(null);
-
-  const apiKey = `AIzaSyD4c6gNvaofT9bAGdjEg4duCTcGilnlllI`;
 
   // call api
   useEffect(() => {
@@ -41,7 +40,10 @@ function StreetViewMap() {
     const cafeMarker = new window.google.maps.Marker({
       position: { lat: 42.346634898587794, lng: -71.10063531753458 },
       map: panoramaInstance,
-      icon: "http://localhost:5174/src/assets/character-1.png",
+      icon: {
+        url: Char1,
+        scaledSize: new window.google.maps.Size(500, 500),
+      },
       title: "Cafe",
     });
 
@@ -60,10 +62,13 @@ function StreetViewMap() {
         {/* show map */}
         <div className="relative flex justify-center items-center w-screen">
           <div id="panorama" style={{ width: "100%", height: "100vh" }}></div>
+          <div className="absolute z-10 top-0 ">
+            <NavBar />
+          </div>
           <div
             id="map"
-            className="absolute"
-            style={{ width: "600px", height: "450px" }}
+            className="absolute z-10 left-5 bottom-5 border-3 border-black rounded-lg  "
+            style={{ width: "200px", height: "150px" }}
           ></div>
         </div>
       </section>
