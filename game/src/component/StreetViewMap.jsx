@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
-
+import { useNavigate } from "react-router-dom";
+import Challenge from "./Challenge";
 function StreetViewMap() {
   const [map, setMap] = useState(null);
   const [panorama, setPanorama] = useState(null);
@@ -8,6 +9,8 @@ function StreetViewMap() {
   const [currentId1, setCurrentId1] = useState("1");
   const [currentId2, setCurrentId2] = useState("2");
   const [currentId3, setCurrentId3] = useState("3");
+
+  const nav = useNavigate();
 
   const charhImage = localStorage.getItem("image");
 
@@ -42,7 +45,7 @@ function StreetViewMap() {
     mapInstance.setStreetView(panoramaInstance);
 
     // Set up the markers on the map
-    const cafeMarker = new window.google.maps.Marker({
+    const charMarker1 = new window.google.maps.Marker({
       position: { lat: 42.346634898587794, lng: -71.10063531753458 },
       map: panoramaInstance,
       icon: {
@@ -73,7 +76,9 @@ function StreetViewMap() {
     });
 
     // Add click event listener to cafeMarker
-    cafeMarker.addListener("click", handleCafeMarkerClick);
+    charMarker1.addListener("click", handleCafeMarkerClick);
+    charMarker2.addListener("click", handleCafeMarkerClick2);
+    charMarker3.addListener("click", handleCafeMarkerClick3);
 
     // Clean up the panorama
     return () => {
@@ -86,7 +91,15 @@ function StreetViewMap() {
 
   const handleCafeMarkerClick = () => {
     // Handle the click event here
-    // console.log("Cafe marker clicked!");
+    nav(`/Challenge/${currentId1}`);
+  };
+  const handleCafeMarkerClick2 = () => {
+    // Handle the click event here
+    nav(`/Challenge/${currentId2}`);
+  };
+  const handleCafeMarkerClick3 = () => {
+    // Handle the click event here
+    nav(`/Challenge/${currentId3}`);
   };
 
   // buttons
