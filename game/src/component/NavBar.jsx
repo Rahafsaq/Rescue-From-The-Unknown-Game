@@ -1,13 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Logo from "../assets/images/prsions.png";
+import { Link } from "react-router-dom";
+
 function NavBar() {
   const [time, setTime] = useState(5 * 60); // Time in seconds
   const [cityimage, setCityImage] = useState("");
   const [charname, setCharName] = useState("");
-  const [currentId1, setCurrentId1] = useState("1");
-  const [currentId2, setCurrentId2] = useState("2");
-  const [currentId3, setCurrentId3] = useState("3");
 
   // get data from mokAPI
   const charName = localStorage.getItem("name");
@@ -48,16 +47,6 @@ function NavBar() {
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
 
-  // buttons
-  const handleClickButton1 = (challengeId) => {
-    setCurrentId1(challengeId);
-  };
-  const handleClickButton2 = (challengeId) => {
-    setCurrentId2(challengeId);
-  };
-  const handleClickButton3 = (challengeId) => {
-    setCurrentId3(challengeId);
-  };
   return (
     <>
       <nav className="w-[98vw]">
@@ -88,7 +77,10 @@ function NavBar() {
           </div>
           {/* logo */}
           <div className="">
-            <img src={`${Logo}`} alt="logo" width={100} />
+            <Link to={"/"}>
+              {" "}
+              <img src={`${Logo}`} alt="logo" width={100} />
+            </Link>
           </div>
         </div>
       </nav>

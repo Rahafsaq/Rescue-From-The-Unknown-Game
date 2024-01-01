@@ -8,6 +8,7 @@ import StagesGame from "../component/StagesGame.jsx";
 import Challenge from "./Challenge.jsx";
 import FindChar from "./FindChar.jsx";
 import StreetViewMap from "./StreetViewMap.jsx";
+import Stagel from "./Stagel.jsx";
 
 function AllRoute() {
   return (
@@ -21,6 +22,7 @@ function AllRoute() {
         <Route path="/FindChar" element={<FindChar />} />
         <Route path="/Challenge/:challengeId" element={<Challenge />} />
         <Route path="/StreetViewMap" element={<StreetViewMap />} />
+        <Route path="/Stagel" element={<Stagel />} />
       </Routes>
     </div>
   );
