@@ -6,29 +6,14 @@ import City2 from '../assets/images/city2.png';
 import ManSearch from '../assets/images/man-search.png';
 import SecondryBG from '../assets/images/secondryBG.png';
 import { useParams } from "react-router-dom";
-import axios from 'axios';
+import char1 from '../assets/images/char1.png'
+import medal from "../assets/medal.png";
 
+import axios from 'axios';
+import bgexplainplay from '../assets/images/bgexplainplay.png'
 
 
 function ExplainGame() {
-	// const [charname, setcharname] = React.useState([]);
-	// // const { id } = useParams();
-
-	// React.useEffect(() => {
-	// 	axios
-	// 	  .get(`https://658d2e7c7c48dce94738a443.mockapi.io/characters`)
-	
-	// 	  .then((res) => {
-	// 		console.log(res.data);
-	// 		setcharname(res.data);
-	// 		localStorage.setItem('id', charname.id)
-	// 	  })
-	// 	  .catch((error) => {
-	// 		console.log(error);
-	// 	  });
-	//   }, []);
-
-
 
 
 	return (
@@ -37,26 +22,31 @@ function ExplainGame() {
 			<section className='min-h-screen w-scree'>
 				{/* image Background */}
 				<div
-					className='relative overflow-hidden bg-cover bg-no-repeat p-12 text-center h-screen max-sm:overflow-auto max-md:overflow-auto'
+					className=' bg-[#5B776D] relative overflow-hidden bg-cover bg-no-repeat p-12 text-center h-screen max-sm:overflow-auto max-md:overflow-auto'
 					style={{
-						backgroundImage: `url(${NFTbg})`,
+						backgroundImage: `url(${bgexplainplay})`,
+						backgroundColor: `rgba(0, 0, 0, 0.0)`,
+
+
 						backgroundSize: `cover`,
 						backgroundPosition: `center`,
 					}}
 				>
+
+					
 					<div
 						className=' bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed flex justify-center items-center max-sm:overflow-auto max-md:overflow-auto'
 						style={{ backgroundColor: `rgba(0, 0, 0, 0.0)` }}
 					>
 						{/* Start explain game box  */}
 						<div className='z-10 flex justify-center w-52 rounded-md p-2 font-bold text-white  absolute'>
-							<p className='text-white text-5xl font-bold z-10 font-serif mb-80 '>طريقة اللعبة</p>
+							<p className='text-white text-2xl font-primary z-10  mb-80 '>طريقة اللعبة</p>
 						</div>
 
 						<div
 							className='absolute w-8/12 h-4/5 flex justify-center items-center rounded-[30px] max-sm:h-full'
 							style={{
-								backgroundImage: `url(${SecondryBG})`,
+								// backgroundImage: `url(${SecondryBG})`,
 								backgroundSize: `cover`,
 								backgroundPosition: `center`,
 							}}
@@ -66,33 +56,34 @@ function ExplainGame() {
 								{/* Box1 */}
 								<div className='h-56'>
 									<img
-										src={`${Trophy2}`}
+										// src={`${Trophy2}`}
+										src={`${medal}`}
 										alt='ManSearch-img'
 										className='mb-16 ml-4 mt-2'
-										width={130}
+										width={140}
 									/>
-									<div className='text-right  flex justify-center '>
-										<p className='w-40 '>اكسب المرحلة لفتح مواقع جديدة</p>
+									<div className='text-right  flex justify-center font-secondary '>
+										<p className='w-44'>اكسب المرحلة لفتح مواقع جديدة</p>
 									</div>
 								</div>
 								{/* Box2 */}
 								<div className='flex flex-col justify-center items-center '>
-									<img src={`${ManSearch}`} alt='ManSearch-img' className=' ml-20' width={200} />
-									<div className='text-right  flex justify-center'>
-										<p className='w-40 '>انطلق و ابدأ بالبحث وانقذ نسخ شخصيتك من السجن</p>
+									<img src={`${char1}`} alt='ManSearch-img' className=' ml-20 ' width={110} />
+									<div className='text-right  flex justify-center font-secondary'>
+										<p className='w-44 '>انطلق و ابدأ بالبحث وانقذ نسخ شخصيتك من السجن</p>
 									</div>
 								</div>
 								{/* Box3 */}
 								<div className=' flex-1 '>
 									<img src={`${City2}`} alt='ManSearch-img' width={200} />
 									<div className='text-right  flex justify-center'>
-										<p className='w-40 '>ستبدأ بالإنقال لموقع عشوائي على خرائط Google</p>
+										<p className='w-44 font-secondary'>ستبدأ بالإنقال لموقع عشوائي على خرائط Google</p>
 									</div>
 								</div>
 							</div>
 							{/* Button */}
 
-							<div className='z-10 flex justify-center w-52 rounded-md p-2 font-bold text-white  absolute bottom-8 bg-[#8D3333]'>
+							<div className='z-10 flex justify-center w-52 rounded-md p-2 font-primary text-white  absolute bottom-8 bg-[#8D3333]'>
 								{/* <Link to={`/Popup/${charname.id}`}> */}
 								<Link to={`/Popup`}>
 									<button>ابدأ اللعبة</button>

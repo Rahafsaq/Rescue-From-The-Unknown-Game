@@ -8,9 +8,10 @@ import Location3 from '../assets/images/locaionIcon3.png';
 import Location1 from '../assets/images/locationIcon1.png';
 import Location2 from '../assets/images/locationIcon2.png';
 import Locked from '../assets/images/locked.png';
-import Mapbg from '../assets/images/mapbg.png';
 import Paper from '../assets/images/paper.png';
 import axios from 'axios';
+import bgmap from '../assets/images/bgmap.jpg'
+import smline from '../assets/images/smline.png'
 function StagesGame() {
 
 	const handleSelectCity = (id) => {
@@ -80,7 +81,7 @@ function StagesGame() {
 				<div
 					className='relative overflow-hidden bg-cover bg-no-repeat p-12 text-center h-screen max-sm:overflow-auto max-md:overflow-auto'
 					style={{
-						backgroundImage: `url(${Mapbg})`,
+						backgroundImage: `url(${bgmap})`,
 						backgroundSize: `cover`,
 						backgroundPosition: `center`,
 					}}>
@@ -107,25 +108,27 @@ function StagesGame() {
 										<div className='flex h-24 mt-8 '>
 											<img src={`${Locked}`} alt='Locked-img' />
 										</div>
+										
 										<div className='flex h-20  pr-4 '>
 											<img
 												src={`${Location3}`}
 												alt='Location-img'
-												style={{ filter: `grayscale(100%)` }}
-											/>
+												style={{ filter: `grayscale(100%)` }}/>
 										</div>
 									</div>
 								</div>
 							</div>
+
+
 							{/* Row-1 Col-2 */}
-							<div className='max-sm:-order-4    '>
-								<div className='relative overflow-hidden p-12 text-center flex justify-center items-center '>
-									<img src={`${Paper}`} alt='city-img' width={300} />
+							<div className='max-sm:-order-4 flex justify-end items-end mr-8 '>
+								<div className='overflow-hidden mt-3  w-60 h-32 text-center flex justify-center items-center rounded-xl bg-[#a58b70af] '>
+									{/* <img src={`${Paper}`} alt='city-img' width={300} /> */}
 									<div className='absolute flex'>
-										<p className='text-black font-bold text-xl'>
+										<p className='text-black font-bold text-xl font-primary'>
 											:البداية
 											<br />
-											<span className='text-black font-sans text-lg font-medium'>
+											<span className='text-black text-lg font-medium font-secondary'>
 												انطلق وانقذ شخصيتك
 											</span>
 										</p>

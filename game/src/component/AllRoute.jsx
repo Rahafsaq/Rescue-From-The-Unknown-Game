@@ -1,4 +1,3 @@
-// import Homepage from ' ./Pages/Homepage.jsx';
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "../Pages/Homepage";
@@ -9,9 +8,10 @@ import Popup from "../component/Popup.jsx";
 import FindChar from "./FindChar.jsx";
 import Challenge from "./Challenge.jsx";
 import Test from "./Test.jsx";
+import Errorpage from "../Pages/Errorpage.jsx";
+// import Tes from '../component/Tes.jsx'
 
-
-
+  
 function AllRoute() {
   return (
     <div>
@@ -20,11 +20,14 @@ function AllRoute() {
         <Route path="/Characters" element={<Characters />} />
         <Route path="/StagesGame" element={<StagesGame />} />
         <Route path="/ExplainGame" element={<ExplainGame />} />
-        {/* <Route path="/Popup/:id" element={<Popup />} /> */}
         <Route path="/Popup" element={<Popup />} />
         <Route path="/FindChar" element={<FindChar />} />
         <Route path="/Challenge" element={<Challenge />} />
         <Route path="/Test" element={<Test />} />
+        <Route path="/*" element={<Errorpage />} />
+        {/* <Route path="Tes" element={<Tes />} /> */}
+        
+
       </Routes>
     </div>
   );
