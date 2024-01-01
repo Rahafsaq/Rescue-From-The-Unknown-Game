@@ -51,7 +51,7 @@ function Homepage() {
                   src={LittleBoy}
                   alt="LittleBoy"
                   className=" z-10"
-                  width={200}
+                  width={250}
                 />
                 <img
                   src={Prsions}
@@ -105,20 +105,17 @@ function Homepage() {
               </p>
             </div>
             {/* Paragraph 3 */}
-            <div className="flex justify-between items-center ">
-              <div className="flex justify-center items-center w-[35%] mt-6">
-
-              <p className="z-10 text-white font-normal leading-16 text-right text-3xl  font-secondary">
-                في كل موقع سيواجه اللاعبون تحديات متعددة يجب عليهم حلها
+          <div className="flex justify-between items-center ">
+              <div className="flex justify-center items-center w-[70%] mt-6">
+              <p className="z-10 text-white font-normal leading-16 text-right text-3xl font-secondary">
+              في كل موقع سيواجه اللاعبون تحديات متعددة يجب عليهم حلها
                 <br /> لتحرير نسخ شخصياتهم والفوز باللعبة
               </p>
               </div>
-             
-
-              <img src={medal} alt="medal" width={250} />
+              <img className='mr-32'src={medal} alt="medal" width={300} />
 
             </div>
-          </div>
+            </div>
           {/* bottom map image */}
           <img
             src={Map}
