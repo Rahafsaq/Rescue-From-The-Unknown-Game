@@ -55,10 +55,10 @@ function Popup() {
           <div className="relative z-10 p-4 w-full max-w-lg h-full md:h-auto">
             <div className="relative p-4 rounded-3xl shadow bg-[#5B776D] dark:bg-gray-800 md:p-8">
               <div className="absolute left-0 top-0 w-[60%] object-fit">
-                <img src={Map} alt="map" className="opacity-25" />
+                <img src={Map} alt="map-left" className="opacity-25" />
               </div>
               <div className="absolute bottom-0 right-0 w-[60%] object-fit">
-                <img src={Map} alt="map" className="opacity-25" />
+                <img src={Map} alt="map-right" className="opacity-25" />
               </div>
               <div className="absolute bottom-0 left-0 rotate-180 w-[20%] object-fit">
                 <img src={Arrow} alt="Arrow" className="" />
@@ -94,7 +94,7 @@ function Popup() {
                   </Link>
                 </div>
               </div>
-              
+
               {/* <div
                 className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed max-sm:overflow-auto max-md:overflow-auto"
                 style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
