@@ -14,6 +14,7 @@ import Levle2 from './Levle2.jsx';
 import Levle3 from './Levle3.jsx';
 import Stagel from './Stagel.jsx';
 import StreetViewMap from './StreetViewMap.jsx';
+import Home2 from '../Pages/Home2.jsx';
 
 
 function AllRoute() {
@@ -35,6 +36,7 @@ function AllRoute() {
 				<Route path='/Stagel' element={<Stagel />} />
 				<Route path='/Levle2' element={<Levle2 />} />
 				<Route path='/Levle3' element={<Levle3 />} />
+				<Route path='/Home2' element={<Home2 />} />
 			</Routes>
 		</div>
 	);

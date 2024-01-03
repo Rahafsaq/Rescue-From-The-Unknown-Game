@@ -93,10 +93,6 @@ function Popup() {
 								</div>
 							</div>
 
-							{/* <div
-                className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed max-sm:overflow-auto max-md:overflow-auto"
-                style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
-              ></div> */}
 						</div>
 					</div>
 				</div>
