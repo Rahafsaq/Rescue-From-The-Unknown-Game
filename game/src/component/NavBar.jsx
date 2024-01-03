@@ -37,31 +37,31 @@ function NavBar(props) {
 	}, [id]);
 
 	// time
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setTime((prevTime) => {
-				const newTime = prevTime > 0 ? prevTime - 1 : 0;
+	// useEffect(() => {
+	// 	const interval = setInterval(() => {
+	// 		setTime((prevTime) => {
+	// 			const newTime = prevTime > 0 ? prevTime - 1 : 0;
 
-				// Check if time has reached 0:00
-				if (newTime === 0 && props.totalChallenges === '1') {
-					clearInterval(interval); // Stop the interval
-					alert('Time is up! You are a loser.'); // Show the alert
-					navigate('/StagesGame');
-				}
+	// 			// Check if time has reached 0:00
+	// 			if (newTime === 0 && props.totalChallenges === '1') {
+	// 				clearInterval(interval); // Stop the interval
+	// 				alert('Time is up! You are a loser.'); // Show the alert
+	// 				navigate('/StagesGame');
+	// 			}
 
-				return newTime;
-			});
-		}, 1000);
+	// 			return newTime;
+	// 		});
+	// 	}, 1000);
 
-		return () => clearInterval(interval);
-	}, []);
+	// 	return () => clearInterval(interval);
+	// }, []);
 
 	useEffect(() => {
 		// Check if totalScore is equal to totalChallenges
-		if (parseInt(totalScore, 10) === props.totalChallenges && props.totalChallenges === '1') {
+		if (parseInt(totalScore, 10) == props.totalChallenges && props.totalChallenges === '1') {
 			localStorage.removeItem('score');
 			navigate('/Levle2');
-		} else if (parseInt(totalScore, 10) === props.totalChallenges && props.totalChallenges === '2') {
+		} else if (parseInt(totalScore, 10) == props.totalChallenges && props.totalChallenges === '2') {
 			localStorage.removeItem('score');
 			navigate('/Levle3');
 		} else {
@@ -93,9 +93,11 @@ function NavBar(props) {
 						</div>
 						<div>
 							{/* <p>الوقت المتبقي</p> */}
-							<div className='text-center font-secondary text-white'>
+							{/* ///////////////////// */}
+							{/* <div className='text-center font-secondary text-white'>
 								{minutes.toString().padStart(2, '0')}:{seconds.toString().padStart(2, '0')}
-							</div>
+							</div> */}
+							{/* /////////////// */}
 							{/* <div>
                 {minutes.toString().padStart(2, "0")}:
                 {seconds.toString().padStart(2, "0")}
