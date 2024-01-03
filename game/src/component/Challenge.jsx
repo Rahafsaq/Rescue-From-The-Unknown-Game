@@ -33,6 +33,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Arrow from '../assets/images/arrow.png';
 import Map from '../assets/images/green-map_1.png';
+import newBgChallenge from '../assets/newChallengeBg.png';
 import StagesChallenge from './stagesChallenge.js';
 
 function Challenge() {
@@ -70,25 +71,19 @@ function Challenge() {
 	}, []);
 
 	return (
-		<>
+		<div
+			className='flex justify-center items-center  h-[100vh]  bg-[rgba(179,97,97,0.6)]'
+			style={{
+				backgroundImage: `url(${newBgChallenge})`,
+				// backgroundSize: cover,
+				// backgroundPosition: center,
+			}}
+		>
 			{/* start section */}
-			<section className='min-h-screen w-screen'>
-				{/* <div
-          className="relative overflow-hidden bg-cover bg-no-repeat p-12 text-center h-screen max-sm:overflow-auto max-md:overflow-auto"
-          style={{
-            backgroundImage: `url(https://mail.google.com/mail/u/0?ui=2&ik=0e14fdc281&attid=0.1&permmsgid=msg-a:r-126004638921908052&th=18cc4c0b69a7cec1&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ-XavAivVMimBK-o0KCs5WEGcp5ypPVgvG6XsGTsh61QBJNiJJZhxvT4m_B-Ur6iXIWOQBYIGQOEjxBQUSORG5QYC4EGQAH0oMtysW0rVPLzLj9aDLy-HeKWQA&disp=emb&realattid=18cc4c0a9ba80918f341)`,
-            backgroundSize: `cover`,
-            backgroundPosition: `center`,
-            // filter: "blur(3px)",
-          }}
-        >
-          <div
-            className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed max-sm:overflow-auto max-md:overflow-auto"
-            style={{ backgroundColor: `rgba(0, 0, 0, 0.6)` }}
-          > */}
-				<div className='flex justify-center items-center h-[100vh]'>
-					<div className='relative z-10 p-4 w-full max-w-lg h-full md:h-auto'>
-						<div className='relative p-4 rounded-3xl shadow bg-[#5B776D] dark:bg-gray-800 md:p-8 w-min'>
+			<section className='h-[80vh] w-scree'>
+				<div className='flex justify-center items-center h-[80vh]'>
+					<div className='flex justify-center relative z-10 p-4  w-[100vw] h-[70vh] md:h-auto '>
+						<div className='relative p-4 rounded-3xl shadow bg-[#5B776D] h-[80vh] w-[60vw] dark:bg-gray-800 md:p-8'>
 							<div className='absolute left-0 top-0 w-[60%] object-fit'>
 								<img src={Map} alt='map-left' className='opacity-25' />
 							</div>
@@ -118,13 +113,13 @@ function Challenge() {
 									</div>
 								)}
 
-								<p className='text-white font-semibold text-center leading-9 text-lg font-secondary'>
+								<p className='text-white font-semibold text-center leading-9 mt-8 text-lg font-secondary'>
 									{Challenge.question}
 								</p>
 							</div>
 							{/* images */}
 							<div className='flex justify-center w-full'>
-								<img src={Challenge.image} alt='q1-img' className='relative z-10 w-[30vw]' />
+								<img src={Challenge.image} alt='q1-img' className='relative z-10 w-[15vw]' />
 							</div>
 							{Challenge.options.length > 0 ? (
 								<div className='flex w-full justify-center gap-4 mt-5 mb-4'>
@@ -169,7 +164,7 @@ function Challenge() {
 				{/* </div>
         </div> */}
 			</section>
-		</>
+		</div>
 	);
 }
 

@@ -11,6 +11,7 @@ import Location1 from '../assets/images/locationIcon1.png';
 import Location2 from '../assets/images/locationIcon2.png';
 import Locked from '../assets/images/locked.png';
 function StagesGame() {
+	const charName = localStorage.getItem('name');
 	const handleSelectCity = (id) => {
 		localStorage.setItem('id', id);
 	};
@@ -110,7 +111,7 @@ function StagesGame() {
 											:البداية
 											<br />
 											<span className='text-black text-lg font-medium font-secondary'>
-												انطلق وانقذ شخصيتك
+												انطلق وانقذ {charName}
 											</span>
 										</p>
 									</div>

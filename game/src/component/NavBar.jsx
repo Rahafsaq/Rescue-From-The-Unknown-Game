@@ -76,7 +76,7 @@ function NavBar(props) {
 			<nav className='w-[98vw]'>
 				{/* save the character */}
 				<div className='flex justify-center items-center h-10 text-white'>
-					<p className='font-bold text-xl font-primary'>الآن عليك الإنقاذ والبحث عن {charName}</p>
+					<p className='font-bold text-xl font-primary'>الآن عليك البحث وإنقاذ {charName}</p>
 				</div>
 				<div className='flex  justify-between items-center '>
 					<div>
@@ -84,7 +84,7 @@ function NavBar(props) {
 					</div>
 					<div className='flex flex-col justify-center items-center'>
 						<div className='text-center flex flex-col items-center'>
-							<p className='text-white font-secondary'>نسخ الشخصيات المكتسبة</p>
+							<p className='text-white font-secondary'>نسخ {charName} التي كسبتها</p>
 							<img src={`${charImage}`} alt='charcter choose nav' width={90} />
 
 							<p className='text-center font-secondary text-white'>
