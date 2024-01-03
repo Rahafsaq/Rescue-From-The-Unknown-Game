@@ -3,6 +3,9 @@ import NavBar from './NavBar';
 import StreetViewMap from './StreetViewMap';
 
 function Stagel() {
+
+
+
 	return (
 		<>
 			<div className='absolute z-10 top-0 '>
@@ -11,6 +14,7 @@ function Stagel() {
 			<StreetViewMap />
 		</>
 	);
+
 }
 
 export default Stagel;
