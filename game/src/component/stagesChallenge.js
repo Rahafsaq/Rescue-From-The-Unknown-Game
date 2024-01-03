@@ -8,6 +8,7 @@ const challenges = [
 	// start challenge 1
 	{
 		challengeId: '1',
+		stage: '1',
 		name: 'التحدي الأول',
 		image: `${q1}`,
 		question: ' ما المقصود من الرمز؟',
@@ -19,6 +20,7 @@ const challenges = [
 	// start challenge 2
 	{
 		challengeId: '2',
+		stage: '2',
 		name: 'التحدي الرابع',
 		image: `${race}`,
 
@@ -31,6 +33,7 @@ const challenges = [
 
 	{
 		challengeId: '3',
+		stage: '2',
 		name: 'مبرووووك',
 		image: `${congrats}`,
 		question: 'فزت بنسخة الشخصية بدون تحدي',
@@ -43,9 +46,9 @@ const challenges = [
 
 	{
 		challengeId: '4',
+		stage: '3',
 		name: 'التحدي الخامس',
 		image: `${fish}`,
-
 		question: 'كان لدي عشر اسماك في , وعدت الى المنزل لأرى أن 6 منهم قد ماتوا , كم تبقى في الحوض؟',
 		options: ['4', '6', '10', '8'],
 		keyAnswer: ['10'],
@@ -55,9 +58,10 @@ const challenges = [
 
 	{
 		challengeId: '5',
+		stage: '3',
 		name: 'التحدي السادس',
 		image: `${girlPower}`,
-		question: ' ما المسلسل الكرنوني المقصود من الرمز؟',
+		question: ' ما المسلسل الكرتوني المقصود من الرمز؟',
 		options: [],
 		keyAnswer: 'فتيات القوة',
 	},
@@ -66,6 +70,7 @@ const challenges = [
 
 	{
 		challengeId: '6',
+		// stage: '3',
 		name: 'التحدي السابع',
 		image: ` ${penguin}`,
 		question: ' ما الحيوان المقصود من الرمز؟',
