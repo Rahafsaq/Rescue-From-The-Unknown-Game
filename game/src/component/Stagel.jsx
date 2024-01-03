@@ -6,7 +6,7 @@ function Stagel() {
 	return (
 		<>
 			<div className='absolute z-10 top-0 '>
-				<NavBar />
+				<NavBar totalChallenges={'1'} />
 			</div>
 			<StreetViewMap />
 		</>
