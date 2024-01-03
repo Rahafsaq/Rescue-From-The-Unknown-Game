@@ -15,20 +15,18 @@ function Homepage() {
   return (
     <>
 
-      {/* Start Hero Section */}
-      <section className="min-h-screen w-screen">
-        {/* Hero image Background */}
+<div className="overflow-hidden">
         <div
-          className="relative overflow-hidden bg-cover  bg-no-repeat p-12 text-center h-screen  max-sm:overflow-auto max-md:overflow-auto"
+          className="relative bg-cover bg-no-repeat p-12 text-center h-[90vh]  max-sm:overflow-auto max-md:overflow-auto "
           style={{
             backgroundImage: `url(${MainBG2})`,
+            backgroundColor: `black`,
             backgroundSize: `cover`,
-            backgroundPosition: `center`,
-          }}>
+            backgroundPosition: `center`,}}>
 
           <div
-            className=" absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed max-sm:overflow-auto max-md:overflow-auto"
-            style={{ backgroundColor: `rgba(0, 0, 0, 0.3)` }}
+            className=" absolute bottom-0 left-0 right-0 top-0 h-full w-full  bg-fixed max-sm:overflow-auto max-md:overflow-auto"
+            // style={{ backgroundColor: `rgba(0, 0, 0, 0.3)` }}
           >
             {/* Content Hero */}
             <div className="flex justify-around items-center h-[100vh]">
@@ -60,85 +58,24 @@ function Homepage() {
                   className="absolute bottom-9"
                   width={270}
                 />
+
+                
               </div>
+              
             </div>
           </div>
         </div>
-      </section>
-      {/* End Hero Section */}
 
-      {/* Start Content Section */}
-      <section className="min-h-screen w-screen">
-        <div className="relative overflow-hidden bg-[#] p-12 text-center min-h-screen  max-sm:overflow-auto max-md:overflow-auto">
-          {/* top map image */}
-          <img
-            src={Map}
-            alt="map-home"
-            className="absolute bottom-[-10px]  right-0 opacity-40"
-            width={700}
-          />
 
-          {/* content  */}
-          <div className=" relative  z-10">
-            <h2 className="text-black font-bold text-6xl font-primary">طريقة اللعب </h2>
-            {/* Paragraph 1 */}
-            <div className="flex justify-between items-center ">
-              <div className="flex justify-center items-center w-[70%] mt-6">
-              <p className="z-10 text-black font-normal leading-16 text-right text-3xl font-secondary">
-                <br /> مشروعنا عبارة عن لعبة تفاعلية حيث يختار اللاعبون شخصية من
-                .الشخصيات المحددة ويبدأون اللعب في مغامرة قائمة على البحث عبر
-                مواقع محددة
-              </p>
-              </div>
-              <img src={erth} alt="earth" width={700} />
-
-            </div>
-            {/* Paragraph 2 */}
-            <div className="flex justify-between items-center ">
-              <div className="flex justify-center items-center w-[100%] mt-6">
-                <img src={searching} alt="searching" width={300} className="" />
-
-              </div>
-              <p className="z-10 text-black  font-normal leading-16 text-right text-3xl  font-secondary">
-                سيتم توزيع كل نسخة من نسخ الشخصية على مواقع عشوائية على خرائط
-                Google ويحتاج اللاعب إلى بدء البحث عن نسخ الشخصيات باستخدام
-                التجوّل الافتراضي في خرائط Google
-              </p>
-            </div>
-            {/* Paragraph 3 */}
-          <div className="flex justify-between items-center ">
-              <div className="flex justify-center items-center w-[70%] mt-6">
-              <p className="z-10 text-black font-normal leading-16 text-right text-3xl font-secondary ">
-              في كل موقع سيواجه اللاعبون تحديات متعددة يجب عليهم حلها
-                <br /> لتحرير نسخ شخصياتهم والفوز باللعبة
-              </p>
-              </div>
-              <img className='mr-32'src={medal} alt="medal" width={300} />
-
-            </div>
-            </div>
-          {/* bottom map image */}
-          <img
-            src={Map}
-            alt="map-home"
-            className="absolute top-[-10px]  left-0 opacity-40 z-0"
-            width={700}
-          />
-          {/* Footer section */}
-          <footer className="h-auto w-full bg-[#5B776D] ] p-6 mt-20">
+        <footer className="h-auto  w-full bg-[#687687ff]  p-4">
             <div className=" ">
-              <h1 className="text-white text-center text-2xl leading-snug max-sm:text-xl ">
-              حقوق النشر: الإنقاذ من المجهول.com
-              </h1>
+              <h1 className="text-white text-center text-3xl leading-snug max-sm:text-xl  ">
+              &#129293;صُنعت بكل بحب  </h1>
             </div>
           </footer>
-        </div>
 
+          </div>
 
-        
-
-      </section>
-     
     </>
   );
 }
