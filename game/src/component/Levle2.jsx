@@ -10,7 +10,7 @@ import Location3 from '../assets/images/locaionIcon3.png';
 import Location1 from '../assets/images/locationIcon1.png';
 import Location2 from '../assets/images/locationIcon2.png';
 import Locked from '../assets/images/locked.png';
-function StagesGame() {
+function Levle2() {
 	const handleSelectCity = (id) => {
 		localStorage.setItem('id', id);
 	};
@@ -73,32 +73,30 @@ function StagesGame() {
 						<div className='grid grid-cols-2 max-sm:grid max-sm:grid-cols-1 max-md:gird max-md:grid-cols-1  '>
 							{/* Row-1 Col-1 */}
 							<div className=' max-sm:-order-1 '>
-								<Link to={'/ExplainGame'} onClick={() => handleSelectCity(3)}>
-									<div className='relative overflow-hidden p-12 text-center flex justify-center items-center vert-move'>
-										<img
-											src={`${City3}`}
-											alt='city-img'
-											width={205}
-											className='cursor-pointer'
-											style={{ filter: `grayscale(100%)` }}
-										/>
+								<div className='relative overflow-hidden p-12 text-center flex justify-center items-center vert-move'>
+									<img
+										src={`${City3}`}
+										alt='city-img'
+										width={205}
+										className='cursor-pointer'
+										style={{ filter: `grayscale(100%)` }}
+									/>
 
-										{/* location-locked images box */}
-										<div className='absolute flex'>
-											<div className='flex h-24 mt-8 '>
-												<img src={`${Locked}`} alt='Locked-img' />
-											</div>
+									{/* location-locked images box */}
+									<div className='absolute flex'>
+										<div className='flex h-24 mt-8 '>
+											<img src={`${Locked}`} alt='Locked-img' />
+										</div>
 
-											<div className='flex h-20  pr-4 '>
-												<img
-													src={`${Location3}`}
-													alt='Location-img'
-													style={{ filter: `grayscale(100%)` }}
-												/>
-											</div>
+										<div className='flex h-20  pr-4 '>
+											<img
+												src={`${Location3}`}
+												alt='Location-img'
+												style={{ filter: `grayscale(100%)` }}
+											/>
 										</div>
 									</div>
-								</Link>
+								</div>
 							</div>
 
 							{/* Row-1 Col-2 */}
@@ -118,7 +116,7 @@ function StagesGame() {
 							</div>
 							{/* Row-2 Col-1 */}
 							<div className=' max-sm:-order-2 '>
-								<Link to={'/ExplainGame'} onClick={() => handleSelectCity(2)}>
+								<Link to={'/Stagell'} onClick={() => handleSelectCity(2)}>
 									<div className='relative overflow-hidden p-12 text-center flex justify-center items-center vert-move'>
 										<img
 											src={`${City2}`}
@@ -128,7 +126,7 @@ function StagesGame() {
 											// className={`cursor-pointer ${
 											// 	updateCity === 'cityimage' ? '' : 'grayscale'
 											// }`}
-											style={{ filter: `grayscale(100%)` }}
+											// style={{ filter: `grayscale(100%)` }}
 										/>
 
 										{/* location-locked images box */}
@@ -137,12 +135,12 @@ function StagesGame() {
 												<img
 													src={`${Location2}`}
 													alt='Location-img'
-													style={{ filter: `grayscale(100%)` }}
+													// style={{ filter: `grayscale(100%)` }}
 												/>
 											</div>
-											<div className='flex h-24'>
+											{/* <div className='flex h-24'>
 												<img src={`${Locked}`} alt='Locked-img' />
-											</div>
+											</div> */}
 										</div>
 									</div>
 								</Link>
@@ -150,13 +148,13 @@ function StagesGame() {
 							{/* Row-2 Col-2 */}
 							<div className='max-sm:-order-3 vert-move '>
 								<div className='relative overflow-hidden p-12 text-center flex justify-center items-center'>
-									<Link to={'/ExplainGame'} onClick={() => handleSelectCity(1)}>
+									<Link to={'/Stagel'} onClick={() => handleSelectCity(1)}>
 										<img src={`${City1}`} alt='city-img' width={250} className='cursor-pointer ' />
 									</Link>
 
 									{/* location-locked images box */}
 									<div className='absolute flex '>
-										<Link to={'/ExplainGame'} onClick={() => handleSelectCity(1)}>
+										<Link to={'/Stagel'} onClick={() => handleSelectCity(1)}>
 											<div className='flex h-20 z-10'>
 												<img src={`${Location1}`} alt='Location-img' />
 											</div>
@@ -176,4 +174,4 @@ function StagesGame() {
 	);
 }
 
-export default StagesGame;
+export default Levle2;
