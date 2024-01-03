@@ -74,26 +74,11 @@ function Levle3() {
 							<div className=' max-sm:-order-1 '>
 								<Link to={'/Stagelll'} onClick={() => handleSelectCity(3)}>
 									<div className='relative overflow-hidden p-12 text-center flex justify-center items-center vert-move'>
-										<img
-											src={`${City3}`}
-											alt='city-img'
-											width={205}
-											className='cursor-pointer'
-											// style={{ filter: `grayscale(100%)` }}
-										/>
+										<img src={`${City3}`} alt='city-img' width={205} className='cursor-pointer' />
 
-										{/* location-locked images box */}
 										<div className='absolute flex'>
-											{/* <div className='flex h-24 mt-8 '>
-												<img src={`${Locked}`} alt='Locked-img' />
-											</div> */}
-
 											<div className='flex h-20  pr-4 '>
-												<img
-													src={`${Location3}`}
-													alt='Location-img'
-													// style={{ filter: `grayscale(100%)` }}
-												/>
+												<img src={`${Location3}`} alt='Location-img' />
 											</div>
 										</div>
 									</div>
@@ -139,9 +124,6 @@ function Levle3() {
 													// style={{ filter: `grayscale(100%)` }}
 												/>
 											</div>
-											{/* <div className='flex h-24'>
-												<img src={`${Locked}`} alt='Locked-img' />
-											</div> */}
 										</div>
 									</div>
 								</Link>

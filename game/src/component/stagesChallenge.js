@@ -25,7 +25,7 @@ const challenges = [
 		image: `${race}`,
 
 		question: 'لقد تفوقت على المركز الثاني في السباق, كم مركزك الان؟',
-		options: ['الاول', 'الثاني', 'الثالث', 'الرابع'],
+		options: ['الرابع', 'الثالث', 'الثاني', 'الاول'],
 		keyAnswer: 'الثاني',
 	},
 	// end challenge 2
@@ -51,7 +51,7 @@ const challenges = [
 		image: `${fish}`,
 		question: 'كان لدي عشر اسماك في , وعدت الى المنزل لأرى أن 6 منهم قد ماتوا , كم تبقى في الحوض؟',
 		options: ['4', '6', '10', '8'],
-		keyAnswer: ['10'],
+		keyAnswer: '10',
 	},
 	// end challenge 4
 	// start challenge 5
