@@ -37,31 +37,31 @@ function NavBar(props) {
 	}, [id]);
 
 	// time
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setTime((prevTime) => {
-				const newTime = prevTime > 0 ? prevTime - 1 : 0;
+	// useEffect(() => {
+	// 	const interval = setInterval(() => {
+	// 		setTime((prevTime) => {
+	// 			const newTime = prevTime > 0 ? prevTime - 1 : 0;
 
-				// Check if time has reached 0:00
-				if (newTime === 0 && props.totalChallenges === '1') {
-					clearInterval(interval); // Stop the interval
-					alert('Time is up! You are a loser.'); // Show the alert
-					navigate('/StagesGame');
-				}
+	// 			// Check if time has reached 0:00
+	// 			if (newTime === 0 && props.totalChallenges === '1') {
+	// 				clearInterval(interval); // Stop the interval
+	// 				alert('Time is up! You are a loser.'); // Show the alert
+	// 				navigate('/StagesGame');
+	// 			}
 
-				return newTime;
-			});
-		}, 1000);
+	// 			return newTime;
+	// 		});
+	// 	}, 1000);
 
-		return () => clearInterval(interval);
-	}, []);
+	// 	return () => clearInterval(interval);
+	// }, []);
 
 	useEffect(() => {
 		// Check if totalScore is equal to totalChallenges
-		if (parseInt(totalScore, 10) === props.totalChallenges && props.totalChallenges === '1') {
+		if (parseInt(totalScore, 10) == props.totalChallenges && props.totalChallenges === '1') {
 			localStorage.removeItem('score');
 			navigate('/Levle2');
-		} else if (parseInt(totalScore, 10) === props.totalChallenges && props.totalChallenges === '2') {
+		} else if (parseInt(totalScore, 10) == props.totalChallenges && props.totalChallenges === '2') {
 			localStorage.removeItem('score');
 			navigate('/Levle3');
 		} else {
@@ -76,7 +76,7 @@ function NavBar(props) {
 			<nav className='w-[98vw]'>
 				{/* save the character */}
 				<div className='flex justify-center items-center h-10 text-white'>
-					<p className='font-bold text-xl font-primary'>الآن عليك الإنقاذ والبحث عن {charName}</p>
+					<p className='font-bold text-xl font-primary'>الآن عليك البحث وإنقاذ {charName}</p>
 				</div>
 				<div className='flex  justify-between items-center '>
 					<div>
@@ -84,7 +84,7 @@ function NavBar(props) {
 					</div>
 					<div className='flex flex-col justify-center items-center'>
 						<div className='text-center flex flex-col items-center'>
-							<p className='text-white font-secondary'>نسخ الشخصيات المكتسبة</p>
+							<p className='text-white font-secondary'>نسخ {charName} التي كسبتها</p>
 							<img src={`${charImage}`} alt='charcter choose nav' width={90} />
 
 							<p className='text-center font-secondary text-white'>
@@ -93,9 +93,11 @@ function NavBar(props) {
 						</div>
 						<div>
 							{/* <p>الوقت المتبقي</p> */}
-							<div className='text-center font-secondary text-white'>
+							{/* ///////////////////// */}
+							{/* <div className='text-center font-secondary text-white'>
 								{minutes.toString().padStart(2, '0')}:{seconds.toString().padStart(2, '0')}
-							</div>
+							</div> */}
+							{/* /////////////// */}
 							{/* <div>
                 {minutes.toString().padStart(2, "0")}:
                 {seconds.toString().padStart(2, "0")}
