@@ -104,7 +104,7 @@ function StagesGame() {
 
 							{/* Row-1 Col-2 */}
 							<div className='max-sm:-order-4 flex justify-end items-end mr-8 '>
-								<div className='overflow-hidden mt-3  w-60 h-32 text-center flex justify-center items-center rounded-xl bg-[#a58b70af] '>
+								<div className='overflow-hidden mt-3  w-60 h-32 text-center   flex justify-center items-center rounded-xl bg-[#a58b70af] max-sm:w-44 max-sm:mr-16 max-sm:mt-9 '>
 									{/* <img src={`${Paper}`} alt='city-img' width={300} /> */}
 									<div className='absolute flex'>
 										<p className='text-black font-bold text-xl font-primary'>
