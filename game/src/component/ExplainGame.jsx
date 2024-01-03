@@ -196,18 +196,19 @@ function ExplainGame() {
     <>
 
 
-      <div className="w-full h-screen" >
-	  <div className="flex justify-center items-center flex-col gap-9 relative">
-	  <p className="text-black text-2xl font-primary mt-11">طريقة اللعبة</p>
+      <div className="w-full h-screen  bg-[#5b776d5e]  " >
+	  <div className="flex justify-center items-center flex-col gap-9 relative ">
+	  <p className="text-black text-4xl font-primary mt-11 max-sm:text-2xl">طريقة اللعبة</p>
 	  <video
             ref={videoRef}
             src={video1}
             autoPlay // Added 'autoPlay' attribute
             loop // Added 'loop' attribute
-            className="object-cover w-[60vw] h-[70vh] rounded-xl"
+            className="object-cover w-[60vw] h-[70vh] rounded-xl max-sm:w-[90vw] max-sm:h-[65vh] "
           />
-		{/* <img src={`${Bgmapp}`} alt="" /> */}
-
+		<Link to={`/Popup`}>
+								<button className='bg-[#8D3333] font-primary text-white p-2 rounded-xl'>ابدأ اللعبة</button>
+							</Link>
       </div>
 	  </div>
       {/* Rest of the component */}
