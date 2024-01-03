@@ -14,6 +14,7 @@ import searching from "../assets/searching.png";
 function Homepage() {
   return (
     <>
+
       {/* Start Hero Section */}
       <section className="min-h-screen w-screen">
         {/* Hero image Background */}
@@ -68,7 +69,7 @@ function Homepage() {
 
       {/* Start Content Section */}
       <section className="min-h-screen w-screen">
-        <div className="relative overflow-hidden bg-[#5b776d] p-12 text-center min-h-screen  max-sm:overflow-auto max-md:overflow-auto">
+        <div className="relative overflow-hidden bg-[#] p-12 text-center min-h-screen  max-sm:overflow-auto max-md:overflow-auto">
           {/* top map image */}
           <img
             src={Map}
@@ -79,11 +80,11 @@ function Homepage() {
 
           {/* content  */}
           <div className=" relative  z-10">
-            <h2 className="text-white font-bold text-6xl font-primary">طريقة اللعب </h2>
+            <h2 className="text-black font-bold text-6xl font-primary">طريقة اللعب </h2>
             {/* Paragraph 1 */}
             <div className="flex justify-between items-center ">
               <div className="flex justify-center items-center w-[70%] mt-6">
-              <p className="z-10 text-white font-normal leading-16 text-right text-3xl font-secondary">
+              <p className="z-10 text-black font-normal leading-16 text-right text-3xl font-secondary">
                 <br /> مشروعنا عبارة عن لعبة تفاعلية حيث يختار اللاعبون شخصية من
                 .الشخصيات المحددة ويبدأون اللعب في مغامرة قائمة على البحث عبر
                 مواقع محددة
@@ -98,7 +99,7 @@ function Homepage() {
                 <img src={searching} alt="searching" width={300} className="" />
 
               </div>
-              <p className="z-10 text-white font-normal leading-16 text-right text-3xl  font-secondary">
+              <p className="z-10 text-black  font-normal leading-16 text-right text-3xl  font-secondary">
                 سيتم توزيع كل نسخة من نسخ الشخصية على مواقع عشوائية على خرائط
                 Google ويحتاج اللاعب إلى بدء البحث عن نسخ الشخصيات باستخدام
                 التجوّل الافتراضي في خرائط Google
@@ -107,7 +108,7 @@ function Homepage() {
             {/* Paragraph 3 */}
           <div className="flex justify-between items-center ">
               <div className="flex justify-center items-center w-[70%] mt-6">
-              <p className="z-10 text-white font-normal leading-16 text-right text-3xl font-secondary">
+              <p className="z-10 text-black font-normal leading-16 text-right text-3xl font-secondary ">
               في كل موقع سيواجه اللاعبون تحديات متعددة يجب عليهم حلها
                 <br /> لتحرير نسخ شخصياتهم والفوز باللعبة
               </p>
