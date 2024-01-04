@@ -45,7 +45,6 @@ function NavBar(props) {
 		} else if (parseInt(totalScore, 10) == props.totalChallenges && props.totalChallenges === '2') {
 			localStorage.removeItem('score');
 			navigate('/Levle3');
-		} else {
 		}
 	}, [totalScore, props.totalChallenges, navigate]);
 
