@@ -21,7 +21,6 @@ function ExplainGame() {
   return (
     <>
 
-
       <div className="w-full h-screen  bg-[#5b776d5e]  " >
 	  <div className="flex justify-center items-center flex-col gap-9 relative ">
 	  <p className="text-black text-4xl font-primary mt-11 max-sm:text-2xl">طريقة اللعبة</p>
