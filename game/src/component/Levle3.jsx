@@ -131,13 +131,13 @@ function Levle3() {
 							{/* Row-2 Col-2 */}
 							<div className='max-sm:-order-3 vert-move '>
 								<div className='relative overflow-hidden p-12 text-center flex justify-center items-center'>
-									<Link to={'/Stagel'} onClick={() => handleSelectCity(1)}>
+									<Link to={'/Popup3'} onClick={() => handleSelectCity(1)}>
 										<img src={`${City1}`} alt='city-img' width={250} className='cursor-pointer ' />
 									</Link>
 
 									{/* location-locked images box */}
 									<div className='absolute flex '>
-										<Link to={'/Stagel'} onClick={() => handleSelectCity(1)}>
+										<Link to={'/Popup3'} onClick={() => handleSelectCity(1)}>
 											<div className='flex h-20 z-10'>
 												<img src={`${Location1}`} alt='Location-img' />
 											</div>
