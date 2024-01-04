@@ -5,7 +5,7 @@ function StreetViewMap() {
   const [map, setMap] = useState(null);
   const [panorama, setPanorama] = useState(null);
   //buttons
-  const [currentId1, setCurrentId1] = useState("6");
+  const [currentId1, setCurrentId1] = useState("1");
 
   const nav = useNavigate();
 
