@@ -36,25 +36,6 @@ function NavBar(props) {
 			});
 	}, [id]);
 
-	// time
-	// useEffect(() => {
-	// 	const interval = setInterval(() => {
-	// 		setTime((prevTime) => {
-	// 			const newTime = prevTime > 0 ? prevTime - 1 : 0;
-
-	// 			// Check if time has reached 0:00
-	// 			if (newTime === 0 && props.totalChallenges === '1') {
-	// 				clearInterval(interval); // Stop the interval
-	// 				alert('Time is up! You are a loser.'); // Show the alert
-	// 				navigate('/StagesGame');
-	// 			}
-
-	// 			return newTime;
-	// 		});
-	// 	}, 1000);
-
-	// 	return () => clearInterval(interval);
-	// }, []);
 
 	useEffect(() => {
 		// Check if totalScore is equal to totalChallenges

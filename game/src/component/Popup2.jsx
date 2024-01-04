@@ -47,8 +47,8 @@ function Popup(props) {
 				}}
 			>
 				<div className='flex justify-center items-center h-[100vh]'>
-					<div className='relative z-10 p-4 w-full max-w-lg h-full md:h-auto'>
-						<div className='relative p-4 rounded-3xl shadow bg-[#5B776D] dark:bg-gray-800 md:p-8'>
+					<div className='relative z-10 p-4 w-full max-w-lg h-full md:h-auto max-sm:flex max-sm:flex-col max-sm:justify-center  max-sm:items-center'>
+						<div className='relative p-4 rounded-3xl shadow bg-[#bdbcbc] dark:bg-gray-800 md:p-8 max-sm:w-[90vw] max-sm:h-[35vh]'>
 							<div className='absolute left-0 top-0 w-[60%] object-fit'>
 								<img src={Map} alt='map-left' className='opacity-25' />
 							</div>
@@ -78,7 +78,7 @@ function Popup(props) {
 							</div>
 							<div className='z-10 relative flex justify-center items-center pt-0 space-y-4 sm:flex sm:space-y-0'>
 								<div className='flex justify-center items-center space-y-4 sm:space-x-4 sm:flex sm:space-y-0'>
-									<Link to={'/Stagel'}>
+									<Link to={'/Stagell'}>
 										<button
 											id='confirm-button'
 											type='button'

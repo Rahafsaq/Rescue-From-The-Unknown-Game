@@ -72,7 +72,7 @@ function Levle3() {
 						<div className='grid grid-cols-2 max-sm:grid max-sm:grid-cols-1 max-md:gird max-md:grid-cols-1  '>
 							{/* Row-1 Col-1 */}
 							<div className=' max-sm:-order-1 '>
-								<Link to={'/Stagelll'} onClick={() => handleSelectCity(3)}>
+								<Link to={'/Hint3'} onClick={() => handleSelectCity(3)}>
 									<div className='relative overflow-hidden p-12 text-center flex justify-center items-center vert-move'>
 										<img src={`${City3}`} alt='city-img' width={205} className='cursor-pointer' />
 
@@ -102,7 +102,7 @@ function Levle3() {
 							</div>
 							{/* Row-2 Col-1 */}
 							<div className=' max-sm:-order-2 '>
-								<Link to={'/Stagell'} onClick={() => handleSelectCity(2)}>
+								<Link to={'/Hint2'} onClick={() => handleSelectCity(2)}>
 									<div className='relative overflow-hidden p-12 text-center flex justify-center items-center vert-move'>
 										<img
 											src={`${City2}`}
@@ -113,7 +113,7 @@ function Levle3() {
 											// 	updateCity === 'cityimage' ? '' : 'grayscale'
 											// }`}
 											// style={{ filter: `grayscale(100%)` }}
-										/>
+/>
 
 										{/* location-locked images box */}
 										<div className='absolute flex'>
@@ -131,13 +131,13 @@ function Levle3() {
 							{/* Row-2 Col-2 */}
 							<div className='max-sm:-order-3 vert-move '>
 								<div className='relative overflow-hidden p-12 text-center flex justify-center items-center'>
-									<Link to={'/Popup3'} onClick={() => handleSelectCity(1)}>
+									<Link to={'/Hint1'} onClick={() => handleSelectCity(1)}>
 										<img src={`${City1}`} alt='city-img' width={250} className='cursor-pointer ' />
 									</Link>
 
 									{/* location-locked images box */}
 									<div className='absolute flex '>
-										<Link to={'/Popup3'} onClick={() => handleSelectCity(1)}>
+										<Link to={'/Hint1'} onClick={() => handleSelectCity(1)}>
 											<div className='flex h-20 z-10'>
 												<img src={`${Location1}`} alt='Location-img' />
 											</div>

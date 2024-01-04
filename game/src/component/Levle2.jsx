@@ -121,7 +121,7 @@ function Levle2() {
               </div>
               {/* Row-2 Col-1 */}
               <div className=" max-sm:-order-2 ">
-                <Link to={"/Stagell"} onClick={() => handleSelectCity(2)}>
+                <Link to={"/Hint2"} onClick={() => handleSelectCity(2)}>
                   <div className="relative overflow-hidden p-12 text-center flex justify-center items-center vert-move">
                     <img
                       src={`${City2}`}
@@ -153,7 +153,7 @@ function Levle2() {
               {/* Row-2 Col-2 */}
               <div className="max-sm:-order-3 vert-move ">
                 <div className="relative overflow-hidden p-12 text-center flex justify-center items-center">
-                  <Link to={"/Stagel"} onClick={() => handleSelectCity(1)}>
+                  <Link to={"/Hint1"} onClick={() => handleSelectCity(1)}>
                     <img
                       src={`${City1}`}
                       alt="city-img"
@@ -164,7 +164,7 @@ function Levle2() {
 
                   {/* location-locked images box */}
                   <div className="absolute flex ">
-                    <Link to={"/Stagel"} onClick={() => handleSelectCity(1)}>
+                    <Link to={"/Hint1"} onClick={() => handleSelectCity(1)}>
                       <div className="flex h-20 z-10">
                         <img src={`${Location1}`} alt="Location-img" />
                       </div>
