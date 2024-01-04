@@ -25,7 +25,7 @@
     transform: translateY(-7px);
   }
 }
-// speartor style
+
 .betweenSection::after {
   content: "";
   position: absolute;
@@ -75,3 +75,7 @@
 }
 
 
+.selectedButton:focus {
+  background-color: #9d8d6b;
+  color: white;
+}
