@@ -63,28 +63,16 @@ function StreetViewMap3() {
       },
       title: "CharMarker2",
     });
-    // // 42.34608773409417, -71.0956607107891
-    // const charMarker3 = new window.google.maps.Marker({
-    //   position: { lat: 42.34608773409417, lng: -71.0956607107891 },
-    //   map: panoramaInstance,
-    //   icon: {
-    //     url: charhImage,
-    //     scaledSize: new window.google.maps.Size(500, 500),
-    //   },
-    //   title: "CharMarker3",
-    // });
 
     // Add click event listener to cafeMarker
     charMarker1.addListener("click", handleCafeMarkerClick);
     charMarker2.addListener("click", handleCafeMarkerClick2);
-    // charMarker3.addListener("click", handleCafeMarkerClick3);
 
     // Clean up the panorama
     return () => {
       mapInstance.setStreetView(null);
       setPanorama(null);
       setMap(null);
-      // cafeMarker.removeListener("click", handleCafeMarkerClick);
     };
   }, []);
 
@@ -96,10 +84,6 @@ function StreetViewMap3() {
     // Handle the click event here
     nav(`/Challenge/${currentId2}`);
   };
-  // const handleCafeMarkerClick3 = () => {
-  //   // Handle the click event here
-  //   nav(`/Challenge/${currentId3}`);
-  // };
 
   return (
     <>

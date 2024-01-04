@@ -1,6 +1,6 @@
 import congrats from "../assets/congrats.png";
 import fish from "../assets/fish.png";
-import girlPower from "../assets/girl-power.png";
+import girlPower from "../assets/powerGirl.png";
 import q1 from "../assets/images/q1.png";
 import penguin from "../assets/penguin.png";
 import race from "../assets/race.png";
