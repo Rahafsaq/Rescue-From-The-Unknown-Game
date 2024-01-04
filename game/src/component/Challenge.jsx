@@ -13,6 +13,7 @@ function Challenge() {
 	const [btnAnswer, setBtnAnswer] = useState('');
 	const [backToMap, setBackToMap] = useState(false);
 	const [message, setMessage] = useState('');
+
 	const [score, setScore] = useState(() => {
 		const storedScore = localStorage.getItem('score');
 		return storedScore ? parseInt(storedScore, 10) : 0;
@@ -54,8 +55,6 @@ function Challenge() {
 			className='flex flex-col justify-center items-center h-[100vh] max-sm:justify-center '
 			style={{
 				backgroundImage: `url(${newBgChallenge})`,
-				// backgroundSize: cover,
-				// backgroundPosition: center,
 			}}
 		>
 			{/* start section */}
@@ -80,18 +79,6 @@ function Challenge() {
 								<h3 className='mb-3 text-2xl text-center font-bold text-black dark:text-white font-primary max-sm:mt-6'>
 									ابدأ التحدي
 								</h3>
-								{/* <button className='bg-red-500 text-white'>العودة للخريطة</button> */}
-								{/* {backToMap && (
-									<div className='w-full flex justify-center items-center'>
-										<Link to={'/Stagel'}>
-											<button className='py-2 px-4 text-sm text-center text-white rounded-lg bg-[#8D3333] sm:w-auto font-secondary font-semibold'>
-												العودة للخريطة
-											</button>
-										</Link>
-										<p className='text-center text-black font-bold text-2xl '>{message}</p>
-									</div>
-								)} */}
-
 								<p className='text-black font-semibold text-center leading-9 mt-8 text-lg font-secondary max-sm:mt-4'>
 									{Challenge.question}
 								</p>
@@ -101,7 +88,7 @@ function Challenge() {
 								<img
 									src={Challenge.image}
 									alt='q1-img'
-									className='relative z-10 w-[15vw] max-sm:w-[35vw]'
+									className='relative z-10 w-[15vw]  max-sm:w-[35vw]'
 								/>
 							</div>
 							{Challenge.options.length > 0 ? (
@@ -110,14 +97,14 @@ function Challenge() {
 										<button
 											value={option}
 											onClick={(e) => setBtnAnswer(e.target.value)}
-											className='flex justify-center items-center bg-[#E9D6AD] text-gray-600 w-[12vw] p-1 rounded-lg relative z-10 font-secondary'
+											className='flex justify-center items-center bg-[#E9D6AD] text-gray-600 w-[12vw] p-1 rounded-lg relative z-10 font-secondary selectedButton'
 										>
 											{option}
 										</button>
 									))}
 								</div>
 							) : (
-								<div className='w-full flex justify-center p-4 mt-6'>
+								<div className='w-full flex justify-center p-4 mt-6 '>
 									<input
 										name='answer'
 										value={InputAnswer}
@@ -164,8 +151,6 @@ function Challenge() {
 						</div>
 					</div>
 				</div>
-				{/* </div>
-        </div> */}
 			</section>
 		</div>
 	);
