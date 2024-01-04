@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "../App.css";
 import { useNavigate } from "react-router-dom";
-import Challenge from "./Challenge";
+import "../App.css";
 function StreetViewMap() {
   const [map, setMap] = useState(null);
   const [panorama, setPanorama] = useState(null);
   //buttons
   const [currentId1, setCurrentId1] = useState("1");
-  const [currentId2, setCurrentId2] = useState("2");
-  const [currentId3, setCurrentId3] = useState("3");
 
   const nav = useNavigate();
 
@@ -54,63 +51,20 @@ function StreetViewMap() {
       },
       title: "CharMarker1",
     });
-    // 42.34440530744076, -71.09962209569088
-    const charMarker2 = new window.google.maps.Marker({
-      position: { lat: 42.34440530744076, lng: -71.09962209569088 },
-      map: panoramaInstance,
-      icon: {
-        url: charhImage,
-        scaledSize: new window.google.maps.Size(500, 500),
-      },
-      title: "CharMarker2",
-    });
-    // 42.34608773409417, -71.0956607107891
-    const charMarker3 = new window.google.maps.Marker({
-      position: { lat: 42.34608773409417, lng: -71.0956607107891 },
-      map: panoramaInstance,
-      icon: {
-        url: charhImage,
-        scaledSize: new window.google.maps.Size(500, 500),
-      },
-      title: "CharMarker3",
-    });
-
     // Add click event listener to cafeMarker
     charMarker1.addListener("click", handleCafeMarkerClick);
-    charMarker2.addListener("click", handleCafeMarkerClick2);
-    charMarker3.addListener("click", handleCafeMarkerClick3);
 
     // Clean up the panorama
     return () => {
       mapInstance.setStreetView(null);
       setPanorama(null);
       setMap(null);
-      // cafeMarker.removeListener("click", handleCafeMarkerClick);
     };
   }, []);
 
   const handleCafeMarkerClick = () => {
     // Handle the click event here
     nav(`/Challenge/${currentId1}`);
-  };
-  const handleCafeMarkerClick2 = () => {
-    // Handle the click event here
-    nav(`/Challenge/${currentId2}`);
-  };
-  const handleCafeMarkerClick3 = () => {
-    // Handle the click event here
-    nav(`/Challenge/${currentId3}`);
-  };
-
-  // buttons
-  const handleClickButton1 = (challengeId) => {
-    setCurrentId1(challengeId);
-  };
-  const handleClickButton2 = (challengeId) => {
-    setCurrentId2(challengeId);
-  };
-  const handleClickButton3 = (challengeId) => {
-    setCurrentId3(challengeId);
   };
 
   return (
