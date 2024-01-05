@@ -21,5 +21,6 @@ https://www.canva.com/design/DAF30lKzuAo/aoq38PWe2RnUXf9wk6prkQ/edit?utm_content
 ### 2. Sarah Alqahtani 
 #### LinkedIn : 
 ### 3. Mashael Ali 
-#### LinkedIn : 
+#### LinkedIn : https://www.linkedin.com/in/mashael-ali-333a73251
+
 
