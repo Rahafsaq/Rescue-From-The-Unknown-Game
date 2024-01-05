@@ -4,7 +4,7 @@
 
 1. ✨Our project is an interactive game where players choose a character and start play on a search-based adventure across designated locations.
 
-2. ✨Each character copy will distributed on ramdom Google map locations and the player need to start searching for character copies using Google Maps street view.
+2. ✨Each character have a copies that will be distributed on ramdom Google map locations and the player need to start searching for character copies using Google Maps street view.
 
 3. ✨At each location, they encounter a multi-challenges that they must solve to free thier character copies and win the game🎉🏆.
 
