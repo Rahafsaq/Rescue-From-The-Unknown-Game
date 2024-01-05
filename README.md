@@ -17,6 +17,6 @@ https://www.canva.com/design/DAF30lKzuAo/aoq38PWe2RnUXf9wk6prkQ/edit?utm_content
 
 ### **Team Members:**
 #### **Rahaf Alqahtani **\
-#### **LinkedIn **\ : https://www.linkedin.com/in/rahaf-alqahtani-405bb1216
+#### **LinkedIn **\ 
 #### **Sarah Alqahtani **\
 #### **Mashael Ali **\
