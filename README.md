@@ -15,8 +15,8 @@ https://www.figma.com/file/u6bsjngQEpNE68zazQGrpF/Imprisoned-characters?type=des
 https://www.canva.com/design/DAF30lKzuAo/aoq38PWe2RnUXf9wk6prkQ/edit?utm_content=DAF30lKzuAo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 3.https://www.canva.com/design/DAF4HIGAAhc/XfzcpjCVK-T4OcnLI45tMg/edit?utm_content=DAF4HIGAAhc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-### **Team Members:**
-#### Rahaf Alqahtani
-#### **LinkedIn **\ 
+## **Team Members:**
+### Rahaf Alqahtani
+#### LinkedIn : https://www.linkedin.com/in/rahaf-alqahtani-405bb1216
 #### **Sarah Alqahtani **\
 #### **Mashael Ali **\
