@@ -1,4 +1,4 @@
-# **Imprisoned Characters Game:**
+# **Rescue From The Unknown Game:**
 
 ### **Description:**
 
