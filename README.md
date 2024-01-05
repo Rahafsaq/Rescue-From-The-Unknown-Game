@@ -19,7 +19,7 @@ https://www.canva.com/design/DAF30lKzuAo/aoq38PWe2RnUXf9wk6prkQ/edit?utm_content
 ### 1. Rahaf Alqahtani
 #### LinkedIn : https://www.linkedin.com/in/rahaf-alqahtani-405bb1216
 ### 2. Sarah Alqahtani 
-#### LinkedIn : 
+#### LinkedIn : https://www.linkedin.com/in/sarah-al-qahtani-803833248
 ### 3. Mashael Ali 
 #### LinkedIn : https://www.linkedin.com/in/mashael-ali-333a73251
 
