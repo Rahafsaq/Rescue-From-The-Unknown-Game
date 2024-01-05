@@ -8,6 +8,9 @@
 
 3. ✨At each location, they encounter a multi-challenges that they must solve to free thier character copies and win the game🎉🏆.
 
+### **Start Play:**
+https://65987ab5f50dbf1b3503c29c--rescue-from-the-unknown-game.netlify.app/
+
 ### **Resources:**
 1. Figma: 
 https://www.figma.com/file/u6bsjngQEpNE68zazQGrpF/Imprisoned-characters?type=design&node-id=0-1&mode=design&t=zD5RHKU08zxwu2A7-0
