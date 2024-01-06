@@ -1,12 +1,24 @@
 # **Rescue From The Unknown Game:**
 
+
+![Screenshot 2024-01-06 205921](https://github.com/Rahafsaq/Rescue-From-The-Unknown-Game/assets/108081862/d2771f89-6890-4163-ab23-72f6a9b8796a)
+
 ### **Description:**
 
-1. ✨Our project is an interactive game where players choose a character and start play on a search-based adventure across designated locations.
+1. ✨Our project is an interactive game where players choose a character and start playing on a search-based adventure across designated locations.
 
-2. ✨Each character have a copies that will be distributed on ramdom Google map locations and the player need to start searching for character copies using Google Maps street view.
+2. ✨Each character has copies that will be distributed at Random Google Maps locations and the player needs to start searching for character copies using Google Maps street view.
 
-3. ✨At each location, they encounter a multi-challenges that they must solve to free thier character copies and win the game🎉🏆.
+3. ✨At each location, they encounter multi-challenges that they must solve to free their character copies and win the game🎉🏆.
+
+
+# **Demo:**
+
+
+
+https://github.com/Rahafsaq/Rescue-From-The-Unknown-Game/assets/108081862/c78a5814-c68b-43c5-aa8d-bb1515549de0
+
+
 
 ### **Start Play:**
 https://65987ab5f50dbf1b3503c29c--rescue-from-the-unknown-game.netlify.app/
